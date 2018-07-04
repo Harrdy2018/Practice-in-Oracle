@@ -8,5 +8,7 @@
 * CentOS 7 镜像文件
 
 ## 在VM上配置虚拟机的环境
-# 创建虚拟机
+### 1,选择创建新的虚拟机
 ![创建虚拟机](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/mVM.jpg)
+
+### 2，
