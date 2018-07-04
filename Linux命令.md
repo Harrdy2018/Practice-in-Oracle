@@ -36,3 +36,6 @@ yum upgrade 只升级所有包，不升级软件和系统内核
 yum代理设置 /etc/yum.conf 文件尾部加入proxy=...
 wget代理设置 /etc/wgetrc
 ```
+
+***
+## 重启网卡 `service network restart`
