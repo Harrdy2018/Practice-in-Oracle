@@ -20,6 +20,6 @@ uname --help
 ***
 ## yum upgrade 和 yum update
 ```
-yum update 升级所有包同时也升级软件和系统内核
+yum update 升级所有包同时 也升级软件和系统内核
 yum upgrade 只升级所有包，不升级软件和系统内核
 ```
