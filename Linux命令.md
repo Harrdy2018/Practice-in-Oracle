@@ -23,3 +23,8 @@ uname --help
 yum update 升级所有包同时 也升级软件和系统内核
 yum upgrade 只升级所有包，不升级软件和系统内核
 ```
+
+***
+## `su - root` 相当于一个新的用户登录系统
+## 查看计算机名字 `echo $HOSTNAME`
+## 修改计算机名字 `/etc/hostname`
