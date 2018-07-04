@@ -4,6 +4,9 @@
 ## 操作上下键，选择 Install CentOS 7，回车
 ## 选择英文，点击Continue
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/23.png)
+
+***
+## 设置`Date & Time`
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/24.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/25.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/26.png)
