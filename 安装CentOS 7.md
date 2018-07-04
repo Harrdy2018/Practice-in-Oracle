@@ -8,6 +8,9 @@
 ***
 ## 设置`Date & Time`
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/24.png)
+
+***
+## 设置`Software Selection`
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/25.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/26.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/27.png)
