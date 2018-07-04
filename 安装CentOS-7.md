@@ -23,7 +23,17 @@
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/13.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/14.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/15.png)
+
+***
+### 点击完成
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/16.png)
+***
+'''
+注意！！！虽然是点击完成，但是并没有真正装成功！！！
+'''
+ 
+***
+### 点击  编辑虚拟机设置
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/17.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/18.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/19.png)
