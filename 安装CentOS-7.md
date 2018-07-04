@@ -27,9 +27,9 @@
 ### 点击完成
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/15.png)
 ***
-···
+```
 注意！！！虽然是点击完成，但是并没有真正装成功！！！
-···
+```
 
 ***
 ### 点击  编辑虚拟机设置
