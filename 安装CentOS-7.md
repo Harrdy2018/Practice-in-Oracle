@@ -37,8 +37,14 @@
 ***
 
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/17.png)
+
+***
+### 加载CentOS7镜像文件
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/18.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/19.png)
+
+***
+### 移除打印机和设置显示中的3D加速
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/20.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/21.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/22.png)
