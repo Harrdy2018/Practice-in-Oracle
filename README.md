@@ -2,5 +2,5 @@
 南京甲骨文实习经历
 
 ***
-* [配置虚拟机环境](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E5%AE%89%E8%A3%85CentOS-7.md)
+* [新建虚拟机](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/VM%E6%96%B0%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA.md)
 * [安装系统]()
