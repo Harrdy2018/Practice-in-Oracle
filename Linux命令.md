@@ -28,3 +28,11 @@ yum upgrade 只升级所有包，不升级软件和系统内核
 ## `su - root` 相当于一个新的用户登录系统
 ## 查看计算机名字 `echo $HOSTNAME`
 ## 修改计算机名字 `/etc/hostname`
+
+***
+## 代理设置
+```
+全局代理设置 /etc/profile 也可以直接在命令行写入export http_proxy=...
+yum代理设置 /etc/yum.conf 文件尾部加入proxy=...
+wget代理设置 /etc/wgetrc
+```
