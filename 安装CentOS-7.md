@@ -39,3 +39,6 @@
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/17.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/18.png)
 ![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/19.png)
+![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/20.png)
+![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/21.png)
+![](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/22.png)
