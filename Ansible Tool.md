@@ -41,4 +41,10 @@ for i in `cat list.txt`;
 do echo "\033[32m The server $i follows results \033[0m";ssh -l harrdy 10.182.173.155 'df';
 done
 ```
+
+* 获取Ansible版本号  ansible --version
+* Ansible配置文件目录  /etc/ansible/
+```
+两个主要配置文件 ansible.cfg hosts
+```
 ***
