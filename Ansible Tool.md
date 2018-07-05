@@ -36,5 +36,7 @@ for i in `cat list.txt`;do echo $i;done
 批量在服务器执行命令
 for i in `cat list.txt`;do ssh -l harrdy 10.182.173.155 'df';done
 for i in `cat list.txt`;do echo "The server $i follows results";ssh -l harrdy 10.182.173.155 'df';done
+给前面加一个颜色
+for i in `cat list.txt`;do echo "\033[32m The server $i follows results \033[0m";ssh -l harrdy 10.182.173.155 'df';done
 ```
 ***
