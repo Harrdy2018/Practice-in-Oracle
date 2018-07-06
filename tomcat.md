@@ -54,3 +54,14 @@ Jul 07 05:48:03 client-A-132 server[51794]: Jul 07, 2018 5:48:03 AM org.apache.c
 Jul 07 05:48:03 client-A-132 server[51794]: INFO: Server startup in 40 ms
 ```
 * **可以看到状态是 `running` 此时已经代表`tomcat`已经正常的跑起来了。此时我们在浏览器中运行 `http://localhost:8080` 发现是不能访问的**
+
+***
+## 服务器配置
+* **因为前面安装的是 tomcat 的基础服务，并没有安装浏览器管理界面**
+*  安装管理界面 首先我们进入到 tomcat 的 webapps 目录，查看目录 ,发现目录是空的，用下面命令安装默认浏览器管理界面
+*  `yum install tomcat-webapps tomcat-admin-webapps`
+```
+[harrdy@client-A-132 webapps]$ ls
+examples  host-manager  manager  ROOT  sample
+```
+* **发现`webapps`目录已经多出了几个目录。此时再用浏览器访问 `http://localhost:8080`就可以看到如下界面**
