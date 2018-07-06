@@ -65,3 +65,6 @@ Jul 07 05:48:03 client-A-132 server[51794]: INFO: Server startup in 40 ms
 examples  host-manager  manager  ROOT  sample
 ```
 * **发现`webapps`目录已经多出了几个目录。此时再用浏览器访问 `http://localhost:8080`就可以看到如下界面**
+***
+![tomcat测试界面](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/tomcatA.png)
+***
