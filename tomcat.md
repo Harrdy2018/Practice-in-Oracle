@@ -68,3 +68,26 @@ examples  host-manager  manager  ROOT  sample
 ***
 ![tomcat测试界面](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/tomcatA.png)
 ***
+
+```
+点击 Manager App 需要我们输入用户和密码，下面我们来设置一个用户。
+回到 tomcat 安装目录，进入 conf 目录，打开 tomcat-users.xml 文件，在 <tomcat-users> 标签下，添加如下配置：
+<role rolename="manager-gui"/>
+<user username="root" password="root" roles="manager-gui"/>
+上面我们设置了一个用户，用户名：root , 密码：root 。 
+添加完成后，保存退出，然后刷新浏览器，点击 Manager App ， 输入我们设置的用户名和密码，就可以正常登陆了
+```
+
+## 其他重要命令
+```
+停止 tomcat 服务
+systemctl stop tomcat.service
+systemctl stop tomcat
+
+重启 tomcat 服务
+systemctl restart tomcat.service
+systemctl restart tomcat
+
+开机启动 tomcat
+systemctl enable tomcat
+```
