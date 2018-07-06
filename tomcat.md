@@ -53,3 +53,4 @@ Jul 07 05:48:03 client-A-132 server[51794]: INFO: Starting ProtocolHandler ["ajp
 Jul 07 05:48:03 client-A-132 server[51794]: Jul 07, 2018 5:48:03 AM org.apache.catalina.startup.Catalina start
 Jul 07 05:48:03 client-A-132 server[51794]: INFO: Server startup in 40 ms
 ```
+* **可以看到状态是 `running` 此时已经代表`tomcat`已经正常的跑起来了。此时我们在浏览器中运行 `http://localhost:8080` 发现是不能访问的**
