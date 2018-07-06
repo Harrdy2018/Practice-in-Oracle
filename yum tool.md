@@ -33,6 +33,36 @@ Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及
 ## info 显示软件包的描述信息和概要信息
 * yum info tomcat
 `Display details about a package or group of packages`
+```
+[harrdy@client-A-132 ~]$ yum info tomcat
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirrors.njupt.edu.cn
+ * extras: mirrors.njupt.edu.cn
+ * updates: mirrors.njupt.edu.cn
+Installed Packages
+Name        : tomcat
+Arch        : noarch
+Version     : 7.0.76
+Release     : 6.el7
+Size        : 303 k
+Repo        : installed
+From repo   : base
+Summary     : Apache Servlet/JSP Engine, RI for Servlet 3.0/JSP 2.2 API
+URL         : http://tomcat.apache.org/
+License     : ASL 2.0
+Description : Tomcat is the servlet container that is used in the official Reference
+            : Implementation for the Java Servlet and JavaServer Pages technologies.
+            : The Java Servlet and JavaServer Pages specifications are developed by
+            : Sun under the Java Community Process.
+            : 
+            : Tomcat is developed in an open and participatory environment and
+            : released under the Apache Software License version 2.0. Tomcat is intended
+            : to be a collaboration of the best-of-breed developers from around the world.
+
+[harrdy@client-A-132 ~]$ 
+
+```
 
 ## 升级软件包
 * 升级所有的软件包 yum update
