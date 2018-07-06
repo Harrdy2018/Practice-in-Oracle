@@ -17,23 +17,29 @@ Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及
 
 ## 安装软件包
 * yum install tomcat
+`Install a package or packages on your system`
 
 ## 卸载软件包
 * yum remove tomcat
 
 ## 列出软件包的依赖
 * yum deplist tomcat
+`List a package's dependencies`
 
 ## -y 自动应答yes
 * yum -y installed tomcat
+`answer yes for all questions`
 
 ## info 显示软件包的描述信息和概要信息
 * yum info tomcat
+`Display details about a package or group of packages`
 
 ## 升级软件包
 * 升级所有的软件包 yum update
+`Update a package or packages on your system`
 * 升级某一个软件包 yum update tomcat
 * 检查可更新的程序 yum check-update
+`Check for available package updates`
 
 ## Yum 可视化图形界面 Yumex
 * yum Extender (简称 yumex ) , 是 yum 的图形化操作界面。
