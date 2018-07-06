@@ -8,4 +8,4 @@
 * [同一个物理机下的两个虚拟机通信](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E5%AE%9E%E7%8E%B0%E9%80%9A%E4%BF%A1.md)
 * [Ansible运维工具](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Ansible%20Tool.md)
 ***
-* [CentOS 7 初体验之Yum]()
+* [CentOS 7 初体验之Yum](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/yum%20tool.md)
