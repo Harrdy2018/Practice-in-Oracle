@@ -9,3 +9,4 @@
 * [Ansible运维工具](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Ansible%20Tool.md)
 ***
 * [CentOS 7 初体验之Yum](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/yum%20tool.md)
+* [CentOS 7 初体验之tomcat](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/tomcat.md)
