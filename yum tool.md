@@ -33,7 +33,7 @@ Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及
 ## info 显示软件包的描述信息和概要信息
 * yum info tomcat
 `Display details about a package or group of packages`
-```
+```linux
 [harrdy@client-A-132 ~]$ yum info tomcat
 Loaded plugins: fastestmirror, langpacks
 Loading mirror speeds from cached hostfile
