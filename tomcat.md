@@ -79,7 +79,7 @@ examples  host-manager  manager  ROOT  sample
 ```
 * **在我的机器测试的时候需要重启机器，启动服务才能登陆，结果如下所示**
 ***
-![成功登陆界面](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/tomcatB.png)
+![成功登陆界面](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Pictures/tomcatB.jpg)
 ***
 
 ## 其他重要命令
