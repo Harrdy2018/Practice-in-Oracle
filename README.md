@@ -10,4 +10,4 @@
 ***
 * [CentOS 7 初体验之Yum](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/yum%20tool.md)
 * [CentOS 7 初体验之tomcat](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/tomcat.md)
-* [CentOS 7 初体验之Vim](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Vim%20tool.md)
+* [CentOS 7 初体验之Vim](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Vim%20Tool.md)
