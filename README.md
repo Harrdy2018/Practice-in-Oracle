@@ -11,4 +11,4 @@
 * [CentOS 7 初体验之 Yum](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/yum%20tool.md)
 * [CentOS 7 初体验之 tomcat](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/tomcat.md)
 * [CentOS 7 初体验之 Vim](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Vim%20Tool.md)
-* [CentOS 7 初体验之 gcc](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Vim%20Tool.md)
+* [CentOS 7 初体验之 gcc](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/gcc.md)
