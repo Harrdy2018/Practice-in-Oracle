@@ -23,3 +23,20 @@ rpm -vih
 
 第三种 rpm -vih epel-release-7-11.noarch.rpm 
 ```
+
+***
+## 查看
+```
+[harrdy@client-A-132 yum.repos.d]$ pwd
+/etc/yum.repos.d
+[harrdy@client-A-132 yum.repos.d]$ ls
+CentOS-Base.repo  CentOS-Debuginfo.repo  CentOS-Media.repo    CentOS-Vault.repo  epel-testing.repo
+CentOS-CR.repo    CentOS-fasttrack.repo  CentOS-Sources.repo  epel.repo
+```
+
+* 更新源 `yum clean all && yum makecache`
+```
+yum--->>>
+clean          Remove cached data
+makecache      Generate the metadata cache
+```
