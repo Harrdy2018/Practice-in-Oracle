@@ -215,14 +215,25 @@ name=CentOS-$releasever - Base - 163.com
 baseurl=http://mirrors.163.com/centos/$releasever/os/$basearch/
 gpgcheck=1
 gpgkey=http://mirrors.163.com/centos/RPM-GPG-KEY-CentOS-7
+
+#additional packages that extend functionality of existing packages
+[centosplus]
+name=CentOS-$releasever - Plus - 163.com
+baseurl=http://mirrors.163.com/centos/$releasever/centosplus/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://mirrors.163.com/centos/RPM-GPG-KEY-CentOS-7
+
 各个选项说明如下：
 [base]：代表仓库的名字，中括号一定要存在，里面的名称可以随意，但是不能有两个相同的容器名称。
 name:说明一下仓库的意义。
 mirrorlist：这个是仓库的镜像站点列表。一般情况下默认是使用此选项。
-baseurl:这个最重要，因为后面接的就是仓库的实际地址。mirrorlist是由yum程序自行去找镜像站点，baseurl则是指定固定的一个仓库网址。一个repo文件可以定义多个软件源。
+baseurl:这个最重要，因为后面接的就是仓库的实际地址。mirrorlist是由yum程序自行去找镜像站点，baseurl则是指定固定的一个仓库网址。
+一个repo文件可以定义多个软件源。
 enable=1：就是让这个容器启动，如果不想启动可以使用enable=0.
 gpgcheck=1：指定是否需要查阅RPM文件内的数字证书。
 gpgkey：就是数字证书的公钥文件所在的位置。
 
-在Centos-Base.repo中还定义的其它的名称的仓库，如：[updates]、[extras]、[centosplus]等等，这些仓库都为YUM服务器额外附加或者是升级是用到的软件仓库，分别指向不同的路径软件仓库。
+在Centos-Base.repo中还定义的其它的名称的仓库，如：[updates]、[extras]、[centosplus]等等，
+这些仓库都为YUM服务器额外附加或者是升级是用到的软件仓库，分别指向不同的路径软件仓库。
 ```
