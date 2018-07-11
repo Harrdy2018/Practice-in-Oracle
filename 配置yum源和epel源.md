@@ -59,3 +59,36 @@ Saving to: ‘CentOS7-Base-163.repo’
 [harrdy@client-B-133 yum.repos.d]$ ls
 CentOS7-Base-163.repo  Centos-7.repo  repo_bak
 ```
+***
+## 第三步 清除系统 yum 缓存并生成新的 yum 缓存
+```
+[harrdy@client-B-133 yum.repos.d]$ ls                                    # 列出/etc/yum.repos.d/目录下的文件
+CentOS7-Base-163.repo  Centos-7.repo  repo_bak
+[harrdy@client-B-133 yum.repos.d]$ yum clean all                         # 清除系统所有的yum缓存
+Loaded plugins: fastestmirror, langpacks
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Cleaning repos: base extras updates
+Cleaning up everything
+Maybe you want: rm -rf /var/tmp/yum-harrdy-CmO1bX, to also free up space taken by orphaned data from disabled or removed repos
+[harrdy@client-B-133 yum.repos.d]$ yum makecache                        # 生成yum缓存
+Loaded plugins: fastestmirror, langpacks
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Determining fastest mirrors
+base                                                                                                                 | 3.6 kB  00:00:00     
+extras                                                                                                               | 3.4 kB  00:00:00     
+updates                                                                                                              | 3.4 kB  00:00:00     
+(1/7): extras/7/x86_64/prestodelta                                                                                   |  49 kB  00:00:00     
+(2/7): extras/7/x86_64/other_db                                                                                      |  97 kB  00:00:00     
+(3/7): updates/7/x86_64/other_db                                                                                     | 336 kB  00:00:00     
+(4/7): extras/7/x86_64/filelists_db                                                                                  | 524 kB  00:00:00     
+(5/7): updates/7/x86_64/filelists_db                                                                                 | 2.1 MB  00:00:00     
+(6/7): base/7/x86_64/other_db                                                                                        | 2.5 MB  00:00:01     
+(7/7): base/7/x86_64/filelists_db                                                                                    | 6.9 MB  00:00:01     
+Metadata Cache Created
+```
