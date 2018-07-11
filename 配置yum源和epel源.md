@@ -60,7 +60,7 @@ Saving to: ‘CentOS7-Base-163.repo’
 CentOS7-Base-163.repo  Centos-7.repo  repo_bak
 ```
 ***
-## 第三步 清除系统 yum 缓存并生成新的 yum 缓存
+## 第三步 清除系统 `yum` 缓存并生成新的 `yum` 缓存
 ```
 [harrdy@client-B-133 yum.repos.d]$ ls                                    # 列出/etc/yum.repos.d/目录下的文件
 CentOS7-Base-163.repo  Centos-7.repo  repo_bak
