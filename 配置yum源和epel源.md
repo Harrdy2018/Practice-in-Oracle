@@ -144,4 +144,38 @@ Installed:
   epel-release.noarch 0:7-11                                                                                                                
 
 Complete!
+
+# epel 源安装成功，比原来多了一个 epel.repo 和 epel-testing.repo 文件
+[harrdy@client-B-133 yum.repos.d]$ ls
+CentOS7-Base-163.repo  Centos-7.repo  epel.repo  epel-testing.repo  repo_bak
 ```
+***
+## 第五步 使用阿里开源镜像提供的 `epel` 源
+```
+[harrdy@client-B-133 yum.repos.d]$ ls
+CentOS7-Base-163.repo  Centos-7.repo  epel.repo  epel-testing.repo  repo_bak
+[harrdy@client-B-133 yum.repos.d]$ sudo wget http://mirrors.aliyun.com/repo/epel-7.repo       #下载阿里开源镜像的 epel 源文件
+[sudo] password for harrdy: 
+--2018-07-12 04:45:58--  http://mirrors.aliyun.com/repo/epel-7.repo
+Resolving mirrors.aliyun.com (mirrors.aliyun.com)... 180.101.203.226, 180.101.203.224, 180.101.203.223, ...
+Connecting to mirrors.aliyun.com (mirrors.aliyun.com)|180.101.203.226|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 664 [application/octet-stream]
+Saving to: ‘epel-7.repo’
+
+100%[==================================================================================================>] 664         --.-K/s   in 0s      
+
+2018-07-12 04:45:58 (101 MB/s) - ‘epel-7.repo’ saved [664/664]
+
+[harrdy@client-B-133 yum.repos.d]$ ls
+CentOS7-Base-163.repo  Centos-7.repo  epel-7.repo  epel.repo  epel-testing.repo  repo_bak
+```
+***
+## 第六步 再次清除系统 `yum` 缓存，并重新生成新的 `yum` 缓存
+* `yum clean all`
+* `yum makecache`
+
+***
+## 第七步 查看系统可用的 `yum` 源和所有的 `yum` 源
+* `yum repolist enabled`
+* `yum repolist all`
