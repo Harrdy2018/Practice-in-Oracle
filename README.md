@@ -14,4 +14,4 @@
 * [CentOS 7 初体验之 gcc](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/gcc.md)
 * [CentOS 7 初体验之 EPEL源](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/EPEL%E6%BA%90.md)
 ***
-* [CentOS 7 系统配置国内 yum 源和 epel 源]()
+* [CentOS 7 系统配置国内 yum 源和 epel 源](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E9%85%8D%E7%BD%AEyum%E6%BA%90%E5%92%8Cepel%E6%BA%90.md)
