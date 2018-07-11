@@ -179,3 +179,23 @@ CentOS7-Base-163.repo  Centos-7.repo  epel-7.repo  epel.repo  epel-testing.repo 
 ## 第七步 查看系统可用的 `yum` 源和所有的 `yum` 源
 * `yum repolist enabled`
 * `yum repolist all`
+```
+# yum repolist 这是可以看到系统中 epel 源仓库已加载成功。
+
+[harrdy@client-B-133 yum.repos.d]$ yum repolist 
+Loaded plugins: fastestmirror, langpacks
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Repository epel is listed more than once in the configuration
+Repository epel-debuginfo is listed more than once in the configuration
+Repository epel-source is listed more than once in the configuration
+Loading mirror speeds from cached hostfile
+repo id                                             repo name                                                                         status
+base/7/x86_64                                       CentOS-7 - Base - 163.com                                                          9,911
+epel/x86_64                                         Extra Packages for Enterprise Linux 7 - x86_64                                    12,605
+extras/7/x86_64                                     CentOS-7 - Extras - 163.com                                                          314
+updates/7/x86_64                                    CentOS-7 - Updates - 163.com                                                         946
+repolist: 23,776
+```
