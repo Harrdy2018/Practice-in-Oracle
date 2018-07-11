@@ -199,3 +199,30 @@ extras/7/x86_64                                     CentOS-7 - Extras - 163.com 
 updates/7/x86_64                                    CentOS-7 - Updates - 163.com                                                         946
 repolist: 23,776
 ```
+***
+## `repo` 文件详解
+```
+[harrdy@client-B-133 yum.repos.d]$ ls
+CentOS7-Base-163.repo  Centos-7.repo  epel-7.repo  epel.repo  epel-testing.repo  repo_bak
+其中 CentOS7-Base-163.repo  Centos-7.repo 文件中，默认只有第一个 CentOS7-Base-163.repo 文件的 YUM 源连接时启动的，其他三个文件默认不启动。
+
+repo文件是CentOS、RedHat和Fedora操作系统中yum源（软件仓库）的配置文件，通常一个repo文件定义了一个或者多个软件源。
+我们以 CentOS7-Base-163.repo 仓库基础配置文件为例
+一个标准的centos的repo文件内容如下：
+[base]
+name=CentOS-$releasever - Base - 163.com
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+baseurl=http://mirrors.163.com/centos/$releasever/os/$basearch/
+gpgcheck=1
+gpgkey=http://mirrors.163.com/centos/RPM-GPG-KEY-CentOS-7
+各个选项说明如下：
+[base]：代表仓库的名字，中括号一定要存在，里面的名称可以随意，但是不能有两个相同的容器名称。
+name:说明一下仓库的意义。
+mirrorlist：这个是仓库的镜像站点列表。一般情况下默认是使用此选项。
+baseurl:这个最重要，因为后面接的就是仓库的实际地址。mirrorlist是由yum程序自行去找镜像站点，baseurl则是指定固定的一个仓库网址。一个repo文件可以定义多个软件源。
+enable=1：就是让这个容器启动，如果不想启动可以使用enable=0.
+gpgcheck=1：指定是否需要查阅RPM文件内的数字证书。
+gpgkey：就是数字证书的公钥文件所在的位置。
+
+在Centos-Base.repo中还定义的其它的名称的仓库，如：[updates]、[extras]、[centosplus]等等，这些仓库都为YUM服务器额外附加或者是升级是用到的软件仓库，分别指向不同的路径软件仓库。
+```
