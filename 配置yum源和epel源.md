@@ -42,7 +42,6 @@ Saving to: ‘Centos-7.repo’
 
 [harrdy@client-B-133 yum.repos.d]$ ls
 Centos-7.repo  repo_bak
-[harrdy@client-B-133 yum.repos.d]$ 
 
 下载网易的 repo 文件
 [harrdy@client-B-133 yum.repos.d]$ sudo wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
