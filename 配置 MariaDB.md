@@ -21,3 +21,20 @@ Though installing MySQL into CentOS 7 is not difficult (see our MySQL CentOS 7 g
 if you simply need a database MariaDB is recommended for official support and a minimal chance of incompatibilities with other repository software.
 如果您只需要一个数据库，建议使用MariaDB进行官方支持，并且与其他存储库软件不兼容的可能性很小。
 ```
+***
+## Before You Begin
+* To check your hostname run:
+```
+命令 hostname -f, --fqdn, --long     long host name (FQDN)
+
+[harrdy@client-A-132 ~]$ hostname
+client-A-132
+[harrdy@client-A-132 ~]$ hostname -f
+client-A-132
+第一个命令应显示您的短主机名，第二个命令应显示您的完全限定域名（FQDN）
+FQDN-->>fully qualified domain name
+```
+* Update your system
+```
+sudo yum update
+```
