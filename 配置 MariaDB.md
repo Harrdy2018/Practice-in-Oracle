@@ -36,5 +36,5 @@ FQDN-->>fully qualified domain name
 ```
 * Update your system
 ```
-sudo yum update
+sudo yum update  升级所有的软件包
 ```
