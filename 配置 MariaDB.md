@@ -179,3 +179,8 @@ For server side help, type 'help contents'
 
 MariaDB [(none)]> 
 ```
+***
+## Create a New MariaDB User and Database
+* In the example below, `testdb` is the name of the database, `testuser` is the user, and `password` is the user’s password:
+```
+```
