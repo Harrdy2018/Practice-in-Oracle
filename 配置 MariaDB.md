@@ -76,16 +76,16 @@ Reloading privilege tables..
  ... Success!
 
 
-By default, a MariaDB installation has an anonymous user, allowing anyone
+By default, a MariaDB installation has an anonymous(匿名的) user, allowing anyone
 to log into MariaDB without having to have a user account created for
-them.  This is intended only for testing, and to make the installation
+them.  This is intended only for testing(这仅仅是为测试准备的), and to make the installation
 go a bit smoother.  You should remove them before moving into a
 production environment.
 
 Remove anonymous users? [Y/n] n
  ... skipping.
 
-Normally, root should only be allowed to connect from 'localhost'.  This
+Normally(通常地), root should only be allowed to connect from 'localhost'.  This
 ensures that someone cannot guess at the root password from the network.
 
 Disallow root login remotely? [Y/n] n
@@ -98,7 +98,7 @@ before moving into a production environment.
 Remove test database and access to it? [Y/n] n
  ... skipping.
 
-Reloading the privilege tables will ensure that all changes made so far
+Reloading the privilege(特权) tables will ensure that all changes made so far
 will take effect immediately.
 
 Reload privilege tables now? [Y/n] y
