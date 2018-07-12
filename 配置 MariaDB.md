@@ -49,7 +49,7 @@ sudo yum update  升级所有的软件包
 ```
 
 ***
-## Harden MariaDB Server
+## Harden(使坚固) MariaDB Server
 * 运行 `mysql_secure_installation` 脚本以解决默认 `MariaDB` 安装中的几个安全问题
 ```
 [harrdy@client-A-132 ~]$  mysql_secure_installation
