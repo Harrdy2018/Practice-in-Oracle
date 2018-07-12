@@ -111,3 +111,33 @@ installation should now be secure.
 
 Thanks for using MariaDB!
 ```
+
+***
+## Using MariaDB
+* 与 `MariaDB` 交互的标准工具是 `mariadb` 客户端，它随 `mariadb-server` 包一起安装。 `MariaDB` 客户端通过终端使用。
+
+***
+## Root Login
+* 命令 `mysql -u root -p`  `To log in to MariaDB as the root user`
+```
+解释
+mysql -u, --user=name     User for login if not current user.
+mysql -p, --password[=name] Password to use when connecting to server. If password is not given it's asked from the tty.
+```
+* When prompted, enter the root password you assigned when the `mysql_secure_installation` script was run.
+* You’ll then be presented with a welcome header and the MariaDB prompt as shown below :
+```
+[harrdy@client-A-132 ~]$ mysql -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 5.5.56-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> 
+
+
+```
