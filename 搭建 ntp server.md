@@ -60,3 +60,6 @@ Description : A client/server for the Network Time Protocol, this program keeps 
 
 [harrdy@client-A-132 ~]$ 
 ```
+* 设置服务的开机启动     systemctl enable chronyd
+* 启动服务              systemctl start chronyd
+* 查看服务启动状态      systemctl status chronyd
