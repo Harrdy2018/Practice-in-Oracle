@@ -63,3 +63,24 @@ Description : A client/server for the Network Time Protocol, this program keeps 
 * 设置服务的开机启动     systemctl enable chronyd
 * 启动服务              systemctl start chronyd
 * 查看服务启动状态      systemctl status chronyd
+```
+[harrdy@client-A-132 ~]$ systemctl status chronyd
+● chronyd.service - NTP client/server
+   Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2018-07-14 14:48:57 CST; 3s ago          # chronyd 服务已经启动
+     Docs: man:chronyd(8)
+           man:chrony.conf(5)
+  Process: 3320 ExecStartPost=/usr/libexec/chrony-helper update-daemon (code=exited, status=0/SUCCESS)
+  Process: 3313 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+ Main PID: 3318 (chronyd)
+    Tasks: 1
+   CGroup: /system.slice/chronyd.service
+           └─3318 /usr/sbin/chronyd
+
+Jul 14 14:48:57 client-A-132 systemd[1]: Starting NTP client/server...
+Jul 14 14:48:57 client-A-132 chronyd[3318]: chronyd version 3.2 starting (+CMDMON +NTP +REFCLOCK +RTC +PRIVDROP +SCFILTER +SECHASH...+DEBUG)
+Jul 14 14:48:57 client-A-132 chronyd[3318]: Frequency -21.077 +/- 0.415 ppm read from /var/lib/chrony/drift
+Jul 14 14:48:57 client-A-132 systemd[1]: Started NTP client/server.
+Hint: Some lines were ellipsized, use -l to show in full.
+[harrdy@client-A-132 ~]$ 
+```
