@@ -54,4 +54,6 @@ yum install  ibus-libpinyin
 选择 Region & Language--->Input Sources--->添加 Chinese（Intelligent Pinyin）
 选择 Devices--->Keyboard--->Typing--->根据提示设置快捷键 Switch to next input source
 ```
-# kkk
+***
+>kkk
+***
