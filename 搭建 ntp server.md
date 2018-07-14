@@ -115,3 +115,79 @@ firewall-cmd --reload
 * 本次测试使用的客户端IP为 192.168.112.132
 *              服务器    192.168.112.134  
 * 客户端和服务器都安装    chrony软件
+***
+* 将客户端chronyd的配置文件中  /etc/chrony.conf 以下几行注释了，并在后面新增一行
+```
+# Use public servers from the pool.ntp.org project.
+# Please consider joining the pool (http://www.pool.ntp.org/join.html).
+#server 0.centos.pool.ntp.org iburst
+#server 1.centos.pool.ntp.org iburst
+#server 2.centos.pool.ntp.org iburst
+#server 3.centos.pool.ntp.org iburst
+server 192.168.112.134 iburst
+```
+* 将客户时间修改为错误时间
+```
+[root@client-A-132 harrdy]# date -s 20180714
+Sat Jul 14 00:00:00 CST 2018
+[root@client-A-132 harrdy]# date
+Sat Jul 14 00:00:06 CST 2018
+[root@client-A-132 harrdy]# date -s 15:59:00
+Sat Jul 14 15:59:00 CST 2018
+[root@client-A-132 harrdy]# date
+Sat Jul 14 15:59:02 CST 2018
+```
+***
+## 高级设置
+* chrony是ntp协议的另外一种实现，关于chrony与ntp的对比我们可以参考文末参考资料。一般情况下，建议使用chrony代替ntp。
+```
+查看时间同步源。在命令行中输入chronyc进入交互模式。
+
+[root@client-A-132 harrdy]# chronyc
+chrony version 3.2
+Copyright (C) 1997-2003, 2007, 2009-2017 Richard P. Curnow and others
+chrony comes with ABSOLUTELY NO WARRANTY.  This is free software, and
+you are welcome to redistribute it under certain conditions.  See the
+GNU General Public License version 2 for details.
+
+chronyc> sources
+210 Number of sources = 1
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+^? 192.168.112.134               0   6     0     -     +0ns[   +0ns] +/-    0ns
+chronyc> sources -v
+210 Number of sources = 1
+
+  .-- Source mode  '^' = server, '=' = peer, '#' = local clock.
+ / .- Source state '*' = current synced, '+' = combined , '-' = not combined,
+| /   '?' = unreachable, 'x' = time may be in error, '~' = time too variable.
+||                                                 .- xxxx [ yyyy ] +/- zzzz
+||      Reachability register (octal) -.           |  xxxx = adjusted offset,
+||      Log2(Polling interval) --.      |          |  yyyy = measured offset,
+||                                \     |          |  zzzz = estimated error.
+||                                 |    |           \
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+^? 192.168.112.134               0   6     0     -     +0ns[   +0ns] +/-    0ns
+```
+* 查看时间同步状态
+```
+chronyc> sourcestats -v
+210 Number of sources = 1
+                             .- Number of sample points in measurement set.
+                            /    .- Number of residual runs with same sign.
+                           |    /    .- Length of measurement set (time).
+                           |   |    /      .- Est. clock freq error (ppm).
+                           |   |   |      /           .- Est. error in freq.
+                           |   |   |     |           /         .- Est. offset.
+                           |   |   |     |          |          |   On the -.
+                           |   |   |     |          |          |   samples. \
+                           |   |   |     |          |          |             |
+Name/IP Address            NP  NR  Span  Frequency  Freq Skew  Offset  Std Dev
+==============================================================================
+192.168.112.134             0   0     0     +0.000   2000.000     +0ns  4000ms
+```
+* 查看文档
+* man  chrony.conf
+* man  chronyd
+* man  chronyc
