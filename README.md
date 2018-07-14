@@ -55,4 +55,5 @@ yum install  ibus-libpinyin
 选择 Devices--->Keyboard--->Typing--->根据提示设置快捷键 Switch to next input source
 ```
 
-- kkkk
+> lll
+1. kkk
