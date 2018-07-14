@@ -47,3 +47,10 @@ deb是Debian软件包格式，文件扩展名为.deb，跟Debian的命名一样�
 处理这些包的经典程序是dpkg，经常是通过apt来运作。
 通过Alien工具，可以将deb包转换成其他形式的软件包。
 ```
+* CentOS 7 安装低级中文输入法
+```
+su  使用管理员权限
+yum install  ibus-libpinyin
+选择 Region & Language--->Input Sources--->添加 Chinese（Intelligent Pinyin）
+选择 Devices--->Keyboard--->Typing--->根据提示设置快捷键 Switch to next input source
+```
