@@ -54,6 +54,119 @@ yum install  ibus-libpinyin
 选择 Region & Language--->Input Sources--->添加 Chinese（Intelligent Pinyin）
 选择 Devices--->Keyboard--->Typing--->根据提示设置快捷键 Switch to next input source
 ```
-***
->kkk
-***
+* 安装 ping 命令
+* 首先可以用 yum provides 命令来搜索哪个软件包里包含了 ping 命令
+```
+[harrdy@controller ~]$ yum provides */ping
+Loaded plugins: fastestmirror, langpacks
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Repository epel is listed more than once in the configuration
+Repository epel-debuginfo is listed more than once in the configuration
+Repository epel-source is listed more than once in the configuration
+Loading mirror speeds from cached hostfile
+epel/x86_64/filelists                                                                                                |  10 MB  00:00:02     
+1:bash-completion-2.1-6.el7.noarch : Programmable completion for Bash
+Repo        : base
+Matched from:
+Filename    : /usr/share/bash-completion/completions/ping
+
+
+
+cjdns-tools-19.1-4.el7.noarch : Nodejs tools for cjdns
+Repo        : epel
+Matched from:
+Filename    : /usr/libexec/cjdns/tools/ping
+
+
+
+grass-6.4.4-8.el7.x86_64 : GRASS - Geographic Resources Analysis Support System
+Repo        : epel
+Matched from:
+Filename    : /usr/lib64/grass-6.4.4/etc/symbol/extra/ping
+
+
+
+iputils-20160308-10.el7.x86_64 : Network monitoring tools including ping
+Repo        : base
+Matched from:
+Filename    : /bin/ping
+Filename    : /usr/bin/ping
+
+
+
+irssi-0.8.15-16.el7.x86_64 : Modular text mode IRC client with Perl scripting
+Repo        : base
+Matched from:
+Filename    : /usr/share/irssi/help/ping
+
+
+
+pacemaker-cli-1.1.18-11.el7.x86_64 : Command line tools for controlling Pacemaker clusters
+Repo        : base
+Matched from:
+Filename    : /usr/lib/ocf/resource.d/pacemaker/ping
+
+
+
+pacemaker-cli-1.1.18-11.el7_5.2.x86_64 : Command line tools for controlling Pacemaker clusters
+Repo        : updates
+Matched from:
+Filename    : /usr/lib/ocf/resource.d/pacemaker/ping
+
+
+
+pacemaker-cli-1.1.18-11.el7_5.3.x86_64 : Command line tools for controlling Pacemaker clusters
+Repo        : updates
+Matched from:
+Filename    : /usr/lib/ocf/resource.d/pacemaker/ping
+
+
+
+1:qt-examples-4.8.7-2.el7.x86_64 : Programming examples for qt
+Repo        : base
+Matched from:
+Filename    : /usr/lib64/qt4/examples/dbus/pingpong/ping
+
+
+
+qt5-qtbase-examples-5.9.2-3.el7.x86_64 : Programming examples for qt5-qtbase
+Repo        : base
+Matched from:
+Filename    : /usr/lib64/qt5/examples/dbus/pingpong/ping
+
+
+
+rubygem-net-ping-1.7.7-3.el7.noarch : A ping interface for Ruby
+Repo        : epel
+Matched from:
+Filename    : /usr/share/gems/gems/net-ping-1.7.7/lib/net/ping
+
+
+
+uwsgi-devel-2.0.16-1.el7.x86_64 : uWSGI - Development header files and libraries
+Repo        : epel
+Matched from:
+Filename    : /usr/src/uwsgi/2.0.16/plugins/ping
+
+
+
+1:bash-completion-2.1-6.el7.noarch : Programmable completion for Bash
+Repo        : @anaconda
+Matched from:
+Filename    : /usr/share/bash-completion/completions/ping
+
+
+
+iputils-20160308-10.el7.x86_64 : Network monitoring tools including ping   # 可以看到此包包含了 ping 命令
+Repo        : @anaconda
+Matched from:
+Filename    : /bin/ping
+Filename    : /usr/bin/ping
+
+
+
+[harrdy@controller ~]$ 
+```
