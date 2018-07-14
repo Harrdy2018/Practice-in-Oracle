@@ -84,3 +84,29 @@ Jul 14 14:48:57 client-A-132 systemd[1]: Started NTP client/server.
 Hint: Some lines were ellipsized, use -l to show in full.
 [harrdy@client-A-132 ~]$ 
 ```
+* 配置防火墙
+```
+Usage: firewall-cmd [OPTIONS...]
+
+Status Options
+  --state              Return and print firewalld state                     #返回打印防火墙的状态
+  --reload             Reload firewall and keep state information           #加载防火墙保持状态信息
+  
+Permanent Options
+  --permanent          Set an option permanently                            #设置一个参数永久的
+                       Usable for options marked with [P]
+  
+Service Options
+  --new-service=<service>
+                       Add a new service [P only]                         
+  --delete-service=<service>
+                       Delete an existing service [P only]
+  --info-service=<service>
+                       Print information about a service
+  --path-service=<service>
+                       Print file path of a service [P only]
+
+按照上诉进行如下设置：
+firewall-cmd --permanent --new-service=ntp
+firewall-cmd --reload
+```
