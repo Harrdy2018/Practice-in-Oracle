@@ -110,3 +110,8 @@ Service Options
 firewall-cmd --permanent --new-service=ntp
 firewall-cmd --reload
 ```
+***
+## 测试
+* 本次测试使用的客户端IP为 192.168.112.132
+*              服务器    192.168.112.134  
+* 客户端和服务器都安装    chrony软件
