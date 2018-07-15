@@ -9,7 +9,7 @@
 * [Ansible运维工具](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Ansible%20Tool.md)
 ***
 * [CentOS 7 初体验之 Yum](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/yum%20tool.md)
-* [CentOS 7 初体验之 软件包的一些事](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/yum%20tool.md)
+* [CentOS 7 初体验之 软件包的一些事](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B.md)
 * [CentOS 7 初体验之 tomcat](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/tomcat.md)
 * [CentOS 7 初体验之 Vim](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Vim%20Tool.md)
 * [CentOS 7 初体验之 gcc](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/gcc.md)
