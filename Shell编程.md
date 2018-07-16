@@ -74,3 +74,76 @@ ID       Name       PHP       Linux        MySQL          Average
 3        Gao        99        83           93             91.66
 [root@controller harrdy]# 
 ```
+* 在第二行后追加hello  也不改变文件本身
+```
+[root@controller harrdy]# sed '2a hello' student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+1        Liming     82        95           86             87.66
+hello
+2        Sc         74        96           87             85.66
+3        Gao        99        83           93             91.66
+[root@controller harrdy]# cat student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+1        Liming     82        95           86             87.66
+2        Sc         74        96           87             85.66
+3        Gao        99        83           93             91.66
+[root@controller harrdy]# 
+```
+* 在第二行前插入数据
+```
+[root@controller harrdy]# sed '2i hello world' student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+hello world
+1        Liming     82        95           86             87.66
+2        Sc         74        96           87             85.66
+3        Gao        99        83           93             91.66
+[root@controller harrdy]# 
+
+[root@controller harrdy]# sed '2i hello \
+> world!!!' student.txt
+ID       Name       PHP       Linux        MySQL          Average
+hello 
+world!!!
+1        Liming     82        95           86             87.66
+2        Sc         74        96           87             85.66
+3        Gao        99        83           93             91.66
+[root@controller harrdy]# 
+```
+* 数据行替换
+```
+[root@controller harrdy]# sed '2c No such person' student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+No such person
+2        Sc         74        96           87             85.66
+3        Gao        99        83           93             91.66
+[root@controller harrdy]# 
+```
+* 字符串替换
+```
+sed 's/旧子串/新子串/g' 文件名
+
+在第3行中，把74换成99
+[root@controller harrdy]# sed '3s/74/99/g' student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+1        Liming     82        95           86             87.66
+2        Sc         99        96           87             85.66
+3        Gao        99        83           93             91.66
+[root@controller harrdy]# 
+
+运维工作人员修改配置文件常用的方法！！！！
+[root@controller harrdy]# sed -i '3s/74/99/g' student.txt 
+[root@controller harrdy]# cat student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+1        Liming     82        95           86             87.66
+2        Sc         99        96           87             85.66
+3        Gao        99        83           93             91.66
+[root@controller harrdy]# 
+
+同时把Liming和Gao替换为空
+[root@controller harrdy]# sed -e 's/Liming//g ; s/Gao//g' student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+1             82        95           86             87.66
+2        Sc         99        96           87             85.66
+3                99        83           93             91.66
+[root@controller harrdy]# 
+```
