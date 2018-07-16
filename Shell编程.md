@@ -24,3 +24,53 @@ p              打印，输出指定的行
 s              子串替换，用一个字符串替换另外一个字符串。
                格式：  行范围s/旧子串/新子串/g
 ```
+* 查看文件的第二行
+```
+[root@controller harrdy]# cat student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+1        Liming     82        95           86             87.66
+2        Sc         74        96           87             85.66
+3        Gao        99        83           93             91.66
+[root@controller harrdy]# sed -n '2p' student.txt 
+1        Liming     82        95           86             87.66
+[root@controller harrdy]# 
+```
+* 接收管道符号
+```
+[root@controller harrdy]# df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/sda3       56594436 5965412  50629024  11% /
+devtmpfs          916596       0    916596   0% /dev
+tmpfs             932648       0    932648   0% /dev/shm
+tmpfs             932648   10636    922012   2% /run
+tmpfs             932648       0    932648   0% /sys/fs/cgroup
+/dev/sda2        2086912   32944   2053968   2% /data
+tmpfs             186532       4    186528   1% /run/user/42
+tmpfs             186532      40    186492   1% /run/user/1000
+/dev/sr0         4364408 4364408         0 100% /run/media/harrdy/CentOS 7 x86_64
+[root@controller harrdy]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        54G  5.7G   49G  11% /
+devtmpfs        896M     0  896M   0% /dev
+tmpfs           911M     0  911M   0% /dev/shm
+tmpfs           911M   11M  901M   2% /run
+tmpfs           911M     0  911M   0% /sys/fs/cgroup
+/dev/sda2       2.0G   33M  2.0G   2% /data
+tmpfs           183M  4.0K  183M   1% /run/user/42
+tmpfs           183M   40K  183M   1% /run/user/1000
+/dev/sr0        4.2G  4.2G     0 100% /run/media/harrdy/CentOS 7 x86_64
+[root@controller harrdy]# df -h | sed -n '2p'
+/dev/sda3        54G  5.7G   49G  11% /
+[root@controller harrdy]# 
+```
+* 删除第二行到第4行的数据，但是不改变文件本身
+```
+[root@controller harrdy]# sed '2,4d' student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+[root@controller harrdy]# cat student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+1        Liming     82        95           86             87.66
+2        Sc         74        96           87             85.66
+3        Gao        99        83           93             91.66
+[root@controller harrdy]# 
+```
