@@ -16,7 +16,8 @@
 * [CentOS 7 初体验之 EPEL源](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/EPEL%E6%BA%90.md)
 * [CentOS 7 初体验之 配置MariaDB](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E9%85%8D%E7%BD%AE%20MariaDB.md)
 * [CentOS 7 初体验之 搭建 ntp server](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E6%90%AD%E5%BB%BA%20ntp%20server.md)
-* [CentOS 7 初体验之 Shell编程](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Shell%E7%BC%96%E7%A8%8B.md)
+* [CentOS 7 初体验之 Shell 变量](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Shell%20%E5%8F%98%E9%87%8F.md)
+* [CentOS 7 初体验之 Shell 编程](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Shell%E7%BC%96%E7%A8%8B.md)
 ***
 * [CentOS 7 系统配置国内 yum 源和 epel 源](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E9%85%8D%E7%BD%AEyum%E6%BA%90%E5%92%8Cepel%E6%BA%90.md)
 
