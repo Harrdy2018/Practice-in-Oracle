@@ -1,5 +1,39 @@
 # Shell 编程
 
+***
+## 第2.1节 字符串截取命令-cut命令
+```
+cut [选项] 文件名
+-f            列号，提取第几列
+-d           分隔符，按照指定分隔符分割列
+
+[root@controller harrdy]# cat stu.txt 
+ID	Name	gender	Mark
+1	Liming	M	86
+2	Sc	M	90
+3	Gao	M	83
+[root@controller harrdy]# cut -f2 stu.txt 
+Name
+Liming
+Sc
+Gao
+[root@controller harrdy]# cut -f2,4 stu.txt 
+Name	Mark
+Liming	86
+Sc	90
+Gao	83
+[root@controller harrdy]# 
+
+[harrdy@controller ~]$ cat lk.txt
+1:2:3:4
+A:B:C:D
+[harrdy@controller ~]$ cut -d ':' -f 2,4 lk.txt 
+2:4
+B:D
+[harrdy@controller ~]$ 
+```
+
+***
 ## 第2.2节 字符串截取命令-printf命令
 ```
 printf '输出类型输出格式'  输出内容
