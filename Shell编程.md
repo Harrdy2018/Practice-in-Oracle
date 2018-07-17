@@ -76,7 +76,52 @@ x<=10    小于等于
 格式化输出
 流程控制语句
 ```
+```
+[harrdy@controller ~]$ cat student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+1        Liming     82        95           86             87.66
+2        Sc         99        96           87             85.66
+3        Gao        99        83           93             91.66
+[harrdy@controller ~]$ awk '{printf $2"\t"$6"\n"}' student.txt 
+Name	Average
+Liming	87.66
+Sc	85.66
+Gao	91.66
 
+
+[harrdy@controller ~]$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        54G  5.7G   49G  11% /
+devtmpfs        896M     0  896M   0% /dev
+tmpfs           911M     0  911M   0% /dev/shm
+tmpfs           911M   11M  901M   2% /run
+tmpfs           911M     0  911M   0% /sys/fs/cgroup
+/dev/sda2       2.0G   33M  2.0G   2% /data
+tmpfs           183M   40K  183M   1% /run/user/1000
+/dev/sr0        4.2G  4.2G     0 100% /run/media/harrdy/CentOS 7 x86_64
+[harrdy@controller ~]$ df -h | awk '{printf $1"\t"$5"\n"}' 
+Filesystem	Use%
+/dev/sda3	11%
+devtmpfs	0%
+tmpfs	0%
+tmpfs	2%
+tmpfs	0%
+/dev/sda2	2%
+tmpfs	1%
+/dev/sr0	100%
+
+Linux系统里面是没有print的，但是awk里面有，print命令默认后面有换行符!!!!!
+[harrdy@controller ~]$ df -h | awk '{print $1"\t"$5}' 
+Filesystem	Use%
+/dev/sda3	11%
+devtmpfs	0%
+tmpfs	0%
+tmpfs	2%
+tmpfs	0%
+/dev/sda2	2%
+tmpfs	1%
+/dev/sr0	100%
+```
 
 ***
 ## 第2.4节 字符串截取命令-sed命令
