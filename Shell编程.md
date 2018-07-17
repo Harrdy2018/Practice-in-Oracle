@@ -160,6 +160,16 @@ Sc	85.66
 Gao	91.66
 End
 ```
+```sh
+内置变量 FS 指定分割符号
+[harrdy@controller ~]$ cat /etc/passwd | grep "/bin/bash"
+root:x:0:0:root:/root:/bin/bash
+harrdy:x:1000:1000:harrdy:/home/harrdy:/bin/bash
+[harrdy@controller ~]$ cat /etc/passwd | grep "/bin/bash" | \
+> awk 'BEGIN {FS=":"} {printf $1"\t"$3"\n"}'
+root	0
+harrdy	1000
+```
 ***
 ## 第2.4节 字符串截取命令-sed命令
 **sed 主要是用来将数据进行选取、替换、删除、新增的命令**
