@@ -175,6 +175,18 @@ awk命令默认先读入第一行数据，所以才会出现下面的结果，�
 root:x:0:0:root:/root:/bin/bash	
 harrdy	1000
 ```
+```sh
+grep -v Name 反选，选择不包括 Name 的这一行
+[harrdy@controller ~]$ cat student.txt 
+ID       Name       PHP       Linux        MySQL          Average
+1        Liming     82        95           86             87.66
+2        Sc         99        96           87             85.66
+3        Gao        99        83           93             91.66
+[harrdy@controller ~]$ cat student.txt | grep -v Name | \
+> awk '$6 >= 87 {printf $2"\n"}'
+Liming
+Gao
+```
 ***
 ## 第2.4节 字符串截取命令-sed命令
 **sed 主要是用来将数据进行选取、替换、删除、新增的命令**
