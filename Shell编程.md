@@ -151,6 +151,15 @@ Liming	87.66
 Sc	85.66
 Gao	91.66
 ```
+```sh
+[harrdy@controller ~]$ awk 'END {printf "End\n"} \
+> {printf $2"\t"$6"\n"}' student.txt
+Name	Average
+Liming	87.66
+Sc	85.66
+Gao	91.66
+End
+```
 ***
 ## 第2.4节 字符串截取命令-sed命令
 **sed 主要是用来将数据进行选取、替换、删除、新增的命令**
