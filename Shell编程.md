@@ -169,6 +169,11 @@ harrdy:x:1000:1000:harrdy:/home/harrdy:/bin/bash
 > awk 'BEGIN {FS=":"} {printf $1"\t"$3"\n"}'
 root	0
 harrdy	1000
+
+awk命令默认先读入第一行数据，所以才会出现下面的结果，所以需要在前面强制加上 BEGIN
+[harrdy@controller ~]$ cat /etc/passwd | grep "/bin/bash" | awk '{FS=":"} {printf $1"\t"$3"\n"}'
+root:x:0:0:root:/root:/bin/bash	
+harrdy	1000
 ```
 ***
 ## 第2.4节 字符串截取命令-sed命令
