@@ -141,7 +141,16 @@ tmpfs           183M   40K  183M   1% /run/user/1000
 [harrdy@controller ~]$ df -h | grep sda3 | awk '{printf $5"\n"}' | cut -d "%" -f1
 11
 ```
-
+```
+在进行数据提取之前，先执行 BEGIN
+[harrdy@controller ~]$ awk 'BEGIN {printf "This is a transcript \n"} \
+> {printf $2 "\t" $6 "\n"}' student.txt
+This is a transcript 
+Name	Average
+Liming	87.66
+Sc	85.66
+Gao	91.66
+```
 ***
 ## 第2.4节 字符串截取命令-sed命令
 **sed 主要是用来将数据进行选取、替换、删除、新增的命令**
