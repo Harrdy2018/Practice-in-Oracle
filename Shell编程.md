@@ -122,6 +122,25 @@ tmpfs	0%
 tmpfs	1%
 /dev/sr0	100%
 ```
+```
+怎么样提取数字11
+[harrdy@controller ~]$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        54G  5.7G   49G  11% /
+devtmpfs        896M     0  896M   0% /dev
+tmpfs           911M     0  911M   0% /dev/shm
+tmpfs           911M   11M  901M   2% /run
+tmpfs           911M     0  911M   0% /sys/fs/cgroup
+/dev/sda2       2.0G   33M  2.0G   2% /data
+tmpfs           183M   40K  183M   1% /run/user/1000
+/dev/sr0        4.2G  4.2G     0 100% /run/media/harrdy/CentOS 7 x86_64
+[harrdy@controller ~]$ df -h | grep sda3
+/dev/sda3        54G  5.7G   49G  11% /
+[harrdy@controller ~]$ df -h | grep sda3 | awk '{printf $5"\n"}'
+11%
+[harrdy@controller ~]$ df -h | grep sda3 | awk '{printf $5"\n"}' | cut -d "%" -f1
+11
+```
 
 ***
 ## 第2.4节 字符串截取命令-sed命令
