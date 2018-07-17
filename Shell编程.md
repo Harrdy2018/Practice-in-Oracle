@@ -1,7 +1,35 @@
 # Shell 编程
 
+## 第2.2节 字符串截取命令-printf命令
+```
+printf '输出类型输出格式'  输出内容
 
-## 字符串截取命令-sed命令
+输出类型：
+%ns                           输出字符串。n是数字指代输出几个字符
+%ni                           输出整数
+%m.nf                         输出浮点数。如 %8.2f 代表共输出8位数，其中2位是小数,6位是整数
+
+输出格式:
+\a                            输出警告声音
+\b                            输出退格键，Backspace
+\f                            清除屏幕
+\n                            换行
+\r                            回车，Enter
+\t                            水平输出退格键，Tab
+\v                           垂直输出退格键，Tab
+```
+* 例子
+```
+[root@controller harrdy]# printf %s 1 2 3 4 5 6
+123456[root@controller harrdy]# printf %s %s %s 1 2 3 4 5 6
+%s%s123456[root@controller harrdy]# printf '%s %s %s' 1 2 3 4 5 6
+1 2 34 5 6[root@controller harrdy]# printf '%s %s %s\n' 1 2 3 4 5 6
+1 2 3
+4 5 6
+[root@controller harrdy]# 
+```
+
+## 第2.3节 字符串截取命令-sed命令
 **sed 主要是用来将数据进行选取、替换、删除、新增的命令**
 ```
 sed [option 选项] '[动作]' 文件名
