@@ -51,5 +51,35 @@ age=23
 sex=female
 [harrdy@client-A-132 ~]$ env | grep name
 [harrdy@client-A-132 ~]$ 
+```
+* 系统常见环境变量
+```sh
+PATH: 系统查找命令的路径
+[harrdy@client-A-132 ~]$ echo $PATH
+/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/harrdy/.local/bin:/home/harrdy/bin
 
+
+
+PATH变量叠加  PATH="$PATH":/root/sh
+
+[root@client-A-132 ~]# pwd
+/root
+[root@client-A-132 ~]# echo $PATH
+/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/harrdy/.local/bin:/home/harrdy/bin
+[root@client-A-132 ~]# vim 2018test.sh
+[root@client-A-132 ~]# cat 2018test.sh 
+#!/bin/sh
+
+echo "Hello World!!"
+[root@client-A-132 ~]# ./2018test.sh
+bash: ./2018test.sh: Permission denied
+[root@client-A-132 ~]# chmod 744 2018test.sh 
+[root@client-A-132 ~]# ./2018test.sh
+Hello World!!
+[root@client-A-132 ~]# PATH="$PATH":/root
+[root@client-A-132 ~]# 2018test.sh
+Hello World!!
+[root@client-A-132 ~]# echo $PATH
+/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/harrdy/.local/bin:/home/harrdy/bin:/root
+[root@client-A-132 ~]# 
 ```
