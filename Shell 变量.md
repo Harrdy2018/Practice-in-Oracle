@@ -120,7 +120,7 @@ $@           这个变量代表命令行中所有的参数，不过
 $#          这个变量代表命令行中所有的参数的个数
 ```
 ***
-```
+```sh
 [root@client-A-132 ~]# ls
 2018test.sh  anaconda-ks.cfg  canshu1.sh  initial-setup-ks.cfg
 [root@client-A-132 ~]# cat canshu1.sh 
@@ -149,7 +149,7 @@ E
 ```
 ***
 * 加法器
-```
+```sh
 [root@client-A-132 ~]# cat add.sh 
 #!/bin/bash
 numA=$1
@@ -159,4 +159,21 @@ echo $sum
 [root@client-A-132 ~]# sh add.sh 1 2
 3
 [root@client-A-132 ~]# 
+```
+***
+```sh
+[root@client-A-132 ~]# cat canshu1.sh 
+#!/bin/bash
+echo $#
+echo $*
+echo $@
+[root@client-A-132 ~]# sh canshu1.sh A B C
+3
+A B C
+A B C
+[root@client-A-132 ~]# 
+```
+***
+* `$*` 与 `$@` 的区别
+```sh
 ```
