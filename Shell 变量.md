@@ -83,3 +83,18 @@ Hello World!!
 /usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/harrdy/.local/bin:/home/harrdy/bin:/root
 [root@client-A-132 ~]# 
 ```
+***
+```sh
+PS1     定义系统提示符的变量
+\d       日期
+\h       主机名
+\t       显示24小时制时间
+\T       显示12小时制时间
+\A       显示24小时制时间
+\u       显示当前用户名
+\w       显示当前所在目录的完整名称
+\W      显示当前所在目录的最后一个目录
+\#      执行的第几个命令
+\$      提示符。如果是root用户会显示提示符为#
+               如果是普通用户会显示提示符为$
+```
