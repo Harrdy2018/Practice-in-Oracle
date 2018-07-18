@@ -147,3 +147,16 @@ D
 E
 [root@client-A-132 ~]# 
 ```
+***
+* 加法器
+```
+[root@client-A-132 ~]# cat add.sh 
+#!/bin/bash
+numA=$1
+numB=$2
+sum=$(($numA+$numB))
+echo $sum
+[root@client-A-132 ~]# sh add.sh 1 2
+3
+[root@client-A-132 ~]# 
+```
