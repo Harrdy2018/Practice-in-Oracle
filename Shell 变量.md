@@ -30,3 +30,26 @@ harrdy
 
 [harrdy@controller ~]$ 
 ```
+***
+## 第4.2节 Bash变量-环境变量
+* 设置环境变量
+```sh
+声明变量     export 变量名=变量值
+查询变量     env
+删除变量     unset 变量名
+
+[harrdy@client-A-132 ~]$ name='Harrdy'                #本地变量
+[harrdy@client-A-132 ~]$ export age=23                #环境变量
+[harrdy@client-A-132 ~]$ sex=female
+[harrdy@client-A-132 ~]$ export sex                   #环境变量
+
+用 set 可以查看   所有的变量都可以查到
+用 env 只可以查到环境变量
+[harrdy@client-A-132 ~]$ env | grep age
+age=23
+[harrdy@client-A-132 ~]$ env | grep sex
+sex=female
+[harrdy@client-A-132 ~]$ env | grep name
+[harrdy@client-A-132 ~]$ 
+
+```
