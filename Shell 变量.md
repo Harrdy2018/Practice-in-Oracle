@@ -119,3 +119,31 @@ $@           这个变量代表命令行中所有的参数，不过
              $@把每个参数区分对待
 $#          这个变量代表命令行中所有的参数的个数
 ```
+***
+```
+[root@client-A-132 ~]# ls
+2018test.sh  anaconda-ks.cfg  canshu1.sh  initial-setup-ks.cfg
+[root@client-A-132 ~]# cat canshu1.sh 
+#!/bin/bash
+echo $0
+echo $1
+echo $2
+echo $3
+echo $4
+echo $5
+[root@client-A-132 ~]# canshu1.sh
+/root/canshu1.sh
+
+
+
+
+
+[root@client-A-132 ~]# canshu1.sh A B C D E
+/root/canshu1.sh
+A
+B
+C
+D
+E
+[root@client-A-132 ~]# 
+```
