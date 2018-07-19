@@ -207,10 +207,23 @@ $$           当前进程的进程号  PID
 $!           后台运行的最后一个进程的进程号  PID
 ```
 * 接受键盘输入
-```
+```sh
 read 选项 变量名
 -p       提示信息
 -t       秒数，等待时间
 -n       字符数，指定的字符数
 -s       隐藏输入的数据
+
+[root@client-A-132 ~]# cat add.sh 
+#!/bin/bash
+read -t 30 -p "Please input an integer:>>>" numA
+read -t 30 -p "Please input other integer:>>>" numB
+
+sum=$(($numA+$numB))
+echo $sum
+[root@client-A-132 ~]# sh add.sh 
+Please input an integer:>>>12
+Please input other integer:>>>34
+46
+[root@client-A-132 ~]# 
 ```
