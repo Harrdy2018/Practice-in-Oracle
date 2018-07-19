@@ -176,4 +176,25 @@ A B C
 ***
 * `$*` 与 `$@` 的区别
 ```sh
+[root@client-A-132 ~]# cat test.sh
+#!/bin/bash
+
+for i in "$*"
+do
+  echo "The parameters is :$i"
+done
+
+x=1
+for y in "$@"
+do
+  echo "The parameter $x is : $y"
+  x=$(($x+1))
+done
+
+[root@client-A-132 ~]# sh test.sh A B C
+The parameters is :A B C
+The parameter 1 is : A
+The parameter 2 is : B
+The parameter 3 is : C
+[root@client-A-132 ~]# 
 ```
