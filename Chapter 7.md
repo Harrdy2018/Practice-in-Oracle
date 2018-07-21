@@ -15,6 +15,12 @@ root:x:0:0:root:/root:/bin/bash
 0:         超级用户
 1-499:     系统用户（伪用户）
 500-65535:  普通用户
+第4字段： GID（用户初始组ID）
+第5字段: 用户说明
+第6字段： 家目录
+        普通用户： /home/用户名/
+        超级用户： /root/
+第7字段：登陆之后的Shell        
 
 查看解释配置文件的信息，用 man 5 后面直接加文件名
 [root@client-A-132 ~]# man 5 passwd
@@ -49,4 +55,17 @@ root:x:0:0:root:/root:/bin/bash
        shell       This is the program to run at login (if empty, use /bin/sh).  If set to a nonexistent executable, the  user  will  be
                    unable to login through login(1).  The value in this field is used to set the SHELL environment variable.
 
+```
+* 组：相同类型用户的集合就可以称为一个组
+* 3、初始组和附加组
+```
+初始组：就是指用户一登陆就立刻拥有这个用户组的相关权限，
+       每个用户的初始组只能有一个，一般就是和这个用户的用户名相同的组名作为这个用户的初始组
+附加组: 指用户可以加入多个其他的用户组，
+       并拥有这些组的权限，附加组可以有多个。
+```
+* 4、Shell是什么
+```
+Shell就是Linux的命令解释器
+在/etc/passwd当中，除了标准Shell是/bin/bash之外，还可以写如/sbin/nologin
 ```
