@@ -120,5 +120,14 @@ Fri Dec 27 00:00:00 CST 2013
 * 1、用户的家目录
 ```
 普通用户： /home/用户名/,所有者和所属组都是此用户，权限是700
+[harrdy@client-A-132 ~]$ ll /home/
+total 4
+drwx------. 18 harrdy harrdy 4096 Jul 22 09:15 harrdy
 
+超级用户： /root/，所有者和所属组都是root用户，权限是550
+[root@client-A-132 ~]# ll -d /root/
+dr-xr-x---. 6 root root 282 Jul 22 09:59 /root/
+[root@client-A-132 ~]# 
 ```
+* 2、用户的邮箱     `/var/spool/mail/用户名/`
+* 3、用户模板目录   `/etc/skel/`
