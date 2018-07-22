@@ -131,3 +131,128 @@ dr-xr-x---. 6 root root 282 Jul 22 09:59 /root/
 ```
 * 2、用户的邮箱     `/var/spool/mail/用户名/`
 * 3、用户模板目录   `/etc/skel/`
+***
+## 第3.1节 用户管理命令 useradd
+* 1、useradd命令格式
+```
+Usage: useradd [options] LOGIN
+       useradd -D
+       useradd -D [options]
+
+Options:
+  -c, --comment COMMENT         GECOS field of the new account
+  -d, --home-dir HOME_DIR       home directory of the new account
+  -D, --defaults                print or change default useradd configuration
+  -g, --gid GROUP               name or ID of the primary group of the new
+                                account
+  -G, --groups GROUPS           list of supplementary groups of the new
+  -s, --shell SHELL             login shell of the new account
+  -u, --uid UID                 user ID of the new account
+```
+* 2、添加默认用户   useradd lukang
+```
+实际上系统默认执行了如下几步>>>
+[root@client-A-132 ~]# grep lukang /etc/passwd
+lukang:x:1001:1001::/home/lukang:/bin/bash
+[root@client-A-132 ~]# grep lukang /etc/shadow
+lukang:$6$O3Cmu/x.$jgQ5ER/ZH90k.nt.9eb8LE3uf95Ks2xC7zaOJuCPK3GVVmBTkYj3562LJ4NabHqUYxxP3zSRQl0nC2cbfZnRh/:17734:0:99999:7:::
+[root@client-A-132 ~]# grep lukang /etc/group
+lukang:x:1001:
+[root@client-A-132 ~]# grep lukang /etc/gshadow
+lukang:!::
+[root@client-A-132 ~]# ll -d /home/lukang/
+drwx------. 3 lukang lukang 78 Jul 22 10:16 /home/lukang/
+[root@client-A-132 ~]# ls /var/spool/mail/
+harrdy  lukang  root  rpc
+```
+***
+* 3、用户默认值文件
+```
+[root@client-A-132 ~]# cat /etc/default/useradd 
+# useradd defaults file
+GROUP=100                #用户默认组
+HOME=/home               #用户家目录
+INACTIVE=-1              #密码过期宽限时间（shadow文件7字段）
+EXPIRE=                  #密码失效时间（8）
+SHELL=/bin/bash          #默认shell
+SKEL=/etc/skel           #模板目录
+CREATE_MAIL_SPOOL=yes    #是否建立邮箱
+
+[root@client-A-132 ~]# 
+```
+```
+[root@client-A-132 ~]# cat /etc/login.defs 
+#
+# Please note that the parameters in this configuration file control the
+# behavior of the tools from the shadow-utils component. None of these
+# tools uses the PAM mechanism, and the utilities that use PAM (such as the
+# passwd command) should therefore be configured elsewhere. Refer to
+# /etc/pam.d/system-auth for more information.
+#
+
+# *REQUIRED*
+#   Directory where mailboxes reside, _or_ name of file, relative to the
+#   home directory.  If you _do_ define both, MAIL_DIR takes precedence.
+#   QMAIL_DIR is for Qmail
+#
+#QMAIL_DIR	Maildir
+MAIL_DIR	/var/spool/mail
+#MAIL_FILE	.mail
+
+# Password aging controls:
+#
+#	PASS_MAX_DAYS	Maximum number of days a password may be used.
+#	PASS_MIN_DAYS	Minimum number of days allowed between password changes.
+#	PASS_MIN_LEN	Minimum acceptable password length.
+#	PASS_WARN_AGE	Number of days warning given before a password expires.
+#
+PASS_MAX_DAYS	99999                         #密码有效期（5）
+PASS_MIN_DAYS	0                             #密码修改间隔（4）
+PASS_MIN_LEN	5                             #密码最小5位（PAM）
+PASS_WARN_AGE	7                             #密码到期警告（6）
+
+#
+# Min/max values for automatic uid selection in useradd
+#
+UID_MIN                  1000                 #最小和最大UID范围
+UID_MAX                 60000
+# System accounts
+SYS_UID_MIN               201
+SYS_UID_MAX               999
+
+#
+# Min/max values for automatic gid selection in groupadd
+#
+GID_MIN                  1000
+GID_MAX                 60000
+# System accounts
+SYS_GID_MIN               201
+SYS_GID_MAX               999
+
+#
+# If defined, this command is run when removing a user.
+# It should remove any at/cron/print jobs etc. owned by
+# the user to be removed (passed as the first argument).
+#
+#USERDEL_CMD	/usr/sbin/userdel_local
+
+#
+# If useradd should create home directories for users by default
+# On RH systems, we do. This option is overridden with the -m flag on
+# useradd command line.
+#
+CREATE_HOME	yes
+
+# The permission mask is initialized to this value. If not specified, 
+# the permission mask will be initialized to 022.
+UMASK           077
+
+# This enables userdel to remove user groups if no members exist.
+#
+USERGROUPS_ENAB yes
+
+# Use SHA512 to encrypt password.
+ENCRYPT_METHOD SHA512                             #加密模式
+
+[root@client-A-132 ~]# 
+```
