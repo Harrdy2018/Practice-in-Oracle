@@ -256,3 +256,25 @@ ENCRYPT_METHOD SHA512                             #加密模式
 
 [root@client-A-132 ~]# 
 ```
+***
+## 第3.2节 用户管理命令 passwd
+* 1、passwd命令格式
+```
+Usage: passwd [OPTION...] <accountName>
+  -k, --keep-tokens       keep non-expired authentication tokens
+  -d, --delete            delete the password for the named account (root only)
+  -l, --lock              lock the password for the named account (root only)        #用的多
+  -u, --unlock            unlock the password for the named account (root only)      #用的多
+  -e, --expire            expire the password for the named account (root only)
+  -f, --force             force operation
+  -x, --maximum=DAYS      maximum password lifetime (root only)
+  -n, --minimum=DAYS      minimum password lifetime (root only)
+  -w, --warning=DAYS      number of days warning users receives before password expiration (root only)
+  -i, --inactive=DAYS     number of days after password expiration when an account becomes disabled (root only)
+  -S, --status            report password status on the named account (root only)     #用的多
+  --stdin                 read new tokens from stdin (root only)                      #用的多
+
+Help options:
+  -?, --help              Show this help message
+  --usage                 Display brief usage message
+```
