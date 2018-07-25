@@ -1,7 +1,7 @@
 # 在ansible上部署openstack
 ## 相关脚本
 * 自动化配置 MariaDB 的坑
-```
+```shell
 运行以下脚本之前启动服务  systemctl start mariadb
 
 当在系统上第一次装上 MariaDB 数据库的时候，使用如下脚本进行 root 密码初始化设置！！！
@@ -50,3 +50,4 @@ IDENTIFIED BY 'KEYSTONE_DBPASS';
 exit
 !
 ```
+**我觉得做运维，不要设置数据库的 root 密码，由别人自己去设置，你好我也好！！！**
