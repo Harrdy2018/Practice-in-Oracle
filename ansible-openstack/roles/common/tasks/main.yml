@@ -1,0 +1,27 @@
+---
+# tasks file for common
+- name: stop firewalld
+  service:
+     name: firewalld 
+     state: stopped
+     enabled: no
+
+- name: install centos-release-openstack-queens
+  yum: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+   - centos-release-openstack-queens
+
+#- name: upgarde all packages
+#  yum:
+#    name: '*'
+#    state: latest
+
+- name: install common dependencies
+  yum: 
+    name: "{{ item }}" 
+    state: latest
+  with_items:
+   - python-openstackclient
+   - openstack-selinux
