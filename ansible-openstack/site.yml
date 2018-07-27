@@ -1,0 +1,33 @@
+# This playbook deploys the whole application stack in this site.
+- name: apply common configuration to all nodes
+  hosts: all
+  gather_facts: false
+  remote_user: root
+
+  roles:
+    - common
+
+
+- name: deploy MariaDB and configure the databases
+  hosts: dbservers
+  gather_facts: false
+  remote_user: root
+
+  roles:
+    - db
+
+- name: Configure the Apache HTTP server and Finalize the installation
+  hosts: dbservers
+  gather_facts: false
+  remote_user: root
+
+  roles:
+    - apache
+
+- name: Create a domain, projects, users, and roles
+  hosts: dbservers
+  gather_facts: false
+  remote_user: root
+
+  roles:
+    - example
