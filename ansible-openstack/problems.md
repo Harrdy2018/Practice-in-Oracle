@@ -88,7 +88,7 @@ export OS_IDENTITY_API_VERSION=3
 [root@controller ansible]# echo $OS_USERNAME
 
 ```
-* 不使用ansible直接导入
+* 不使用ansible直接导入,以shell执行脚本文件不能导入
 ```
 [root@controller ~]# cat admin-rc 
 export OS_USERNAME=admin
