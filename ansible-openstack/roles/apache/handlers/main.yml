@@ -1,0 +1,17 @@
+---
+# handlers file for apache
+- name: Create a link
+  file:
+    src: /usr/share/keystone/wsgi-keystone.conf
+    dest: /etc/httpd/conf.d/wsgi-keystone.conf
+    state: link
+- name: Set Apache
+  service:
+    name: httpd
+    enabled: yes
+    state: restarted
+- name: Configure the administrative account
+  command: "{{ item }}"
+  with_items:
+    - cd /root/
+    - source admin-rc
