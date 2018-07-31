@@ -1,0 +1,77 @@
+---
+# tasks file for db
+
+- name: install packages for MariaDB
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - mariadb-server
+
+- name: create and edit the /etc/my.cnf.d/openstack.cnf file 
+  template: 
+    src: openstack.cnf.j2 
+    dest: /etc/my.cnf.d/openstack.cnf
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - set mariadb
+
+- name: restart mariadb
+  service: 
+    name: mariadb
+    state: restarted
+
+- name: copy create_keystone.sh.j2 to /root/create_keystone.sh
+  template:
+    src: create_keystone.sh.j2
+    dest: /root/create_keystone.sh
+    owner: root
+    group: root
+    mode: 0775
+
+- name: create keystone
+  shell: sh /root/create_keystone.sh
+  ignore_errors: yes
+
+
+- name: install openstack-keystone httpd mod_wsgi
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - openstack-keystone
+    - httpd
+    - mod_wsgi
+
+- name: copy keystone.conf to /etc/keystone/keystone.conf
+  copy:
+    src: keystone.conf
+    dest: /etc/keystone/keystone.conf
+    owner: root
+    group: keystone
+    mode: 0640
+    backup: yes
+  
+- name: Populate the Identity service database
+  command: keystone-manage db_sync
+  ignore_errors: yes
+
+- name: Initialize Fernet key repositories
+  command: "{{ item }}"
+  with_items: 
+    - keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
+    - keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
+  ignore_errors: yes
+
+- name: copy identity_service.sh to /root/
+  copy:
+    src: identity_service.sh
+    dest: /root/identity_service.sh
+    owner: root
+    group: root
+    mode: 0775
+
+- name: Bootstrap the Identity service
+  command: sh /root/identity_service.sh
