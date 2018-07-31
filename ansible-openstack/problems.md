@@ -12,6 +12,9 @@
 
 
 ```
+* command模块执行脚本文件
+```
+```
 * shell模块执行语句的时候成功，但是环境变量导不进去
 ```
 [root@controller ansible]# echo $OS_USERNAME
@@ -47,4 +50,7 @@ export OS_IDENTITY_API_VERSION=3
 [root@controller ansible]# echo $OS_USERNAME
 
 
+```
+* 使用script模块
+```
 ```
