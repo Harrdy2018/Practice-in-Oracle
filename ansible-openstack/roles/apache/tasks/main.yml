@@ -1,0 +1,34 @@
+---
+# tasks file for apache
+- name: copy httpd.conf to /etc/httpd/conf/httpd.conf
+  tags: Configure the Apache HTTP server
+  copy:
+    src: httpd.conf
+    dest: /etc/httpd/conf/httpd.conf
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes  
+ 
+- name: Create a link
+  file:
+    src: /usr/share/keystone/wsgi-keystone.conf
+    dest: /etc/httpd/conf.d/wsgi-keystone.conf
+    state: link
+
+- name: Set Apache
+  service:
+    name: httpd
+    enabled: yes
+    state: restarted
+
+- name: Configure the administrative account
+  shell: "{{ item }}"
+  with_items:
+    - export OS_USERNAME=admin
+    - export OS_PASSWORD=ADMIN_PASS
+    - export OS_PROJECT_NAME=admin
+    - export OS_USER_DOMAIN_NAME=Default
+    - export OS_PROJECT_DOMAIN_NAME=Default
+    - export OS_AUTH_URL=http://controller:35357/v3
+    - export OS_IDENTITY_API_VERSION=3
