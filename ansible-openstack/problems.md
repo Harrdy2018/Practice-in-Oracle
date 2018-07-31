@@ -115,3 +115,24 @@ admin
 [root@controller ~]# unset OS_USERNAME
 [root@controller ~]# 
 ```
+```
+[root@controller ~]# ansible all -m command -a 'openstack project create --domain default --description "Demo Project" demo'
+10.182.173.89 | FAILED | rc=1 >>
+Missing value auth-url required for auth plugin passwordnon-zero return code
+
+[root@controller ~]# openstack project create --domain default --description "Demo Project" demo
+Conflict occurred attempting to store project - it is not permitted to have two projects with the same name in the same domain : demo. (HTTP 409) (Request-ID: req-a9dcd256-81b9-406e-b23b-839a8c8bb07d)
+[root@controller ~]# ansible all -m command -a 'openstack role create user'10.182.173.89 | FAILED | rc=1 >>
+Missing value auth-url required for auth plugin passwordnon-zero return code
+
+[root@controller ~]# openstack role create user
++-----------+----------------------------------+
+| Field     | Value                            |
++-----------+----------------------------------+
+| domain_id | None                             |
+| id        | dc62afcd9b96404d8a22a8415074564d |
+| name      | user                             |
++-----------+----------------------------------+
+[root@controller ~]# 
+
+```
