@@ -1,0 +1,7 @@
+---
+# handlers file for db
+- name: set mariadb
+  service: 
+    name: mariadb 
+    enabled: yes
+    state: started
