@@ -90,4 +90,28 @@ export OS_IDENTITY_API_VERSION=3
 ```
 * 不使用ansible直接导入
 ```
+[root@controller ~]# cat admin-rc 
+export OS_USERNAME=admin
+#export OS_PASSWORD=ADMIN_PASS
+#export OS_PROJECT_NAME=admin
+#export OS_USER_DOMAIN_NAME=Default
+#export OS_PROJECT_DOMAIN_NAME=Default
+#export OS_AUTH_URL=http://controller:35357/v3
+#export OS_IDENTITY_API_VERSION=3
+[root@controller ~]# echo $OS_USERNAME
+
+[root@controller ~]# sh /root/admin-rc 
+[root@controller ~]# echo $OS_USERNAME
+
+[root@controller ~]# . /root/admin-rc 
+[root@controller ~]# echo $OS_USERNAME
+admin
+[root@controller ~]# unset OS_USERNAME
+[root@controller ~]# echo $OS_USERNAME
+
+[root@controller ~]# source /root/admin-rc 
+[root@controller ~]# echo $OS_USERNAME
+admin
+[root@controller ~]# unset OS_USERNAME
+[root@controller ~]# 
 ```
