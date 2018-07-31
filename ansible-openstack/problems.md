@@ -14,6 +14,25 @@
 ```
 * command模块执行脚本文件
 ```
+[root@controller ansible]# echo $OS_USERNAME
+
+[root@controller ansible]# ansible all -m command -a 'sh /root/admin-rc'
+10.182.173.89 | SUCCESS | rc=0 >>
+
+
+[root@controller ansible]# echo $OS_USERNAME
+
+[root@controller ansible]# ansible all -m command -a '. /root/admin-rc'
+10.182.173.89 | FAILED | rc=13 >>
+[Errno 13] Permission denied
+
+[root@controller ansible]# ansible all -m command -a 'source /root/admin-rc'
+10.182.173.89 | FAILED | rc=2 >>
+[Errno 2] No such file or directory
+
+[root@controller ansible]# echo $OS_USERNAME
+
+
 ```
 * shell模块执行语句的时候成功，但是环境变量导不进去
 ```
@@ -53,4 +72,19 @@ export OS_IDENTITY_API_VERSION=3
 ```
 * 使用script模块
 ```
+[root@controller ansible]# echo $OS_USERNAME
+
+[root@controller ansible]# ansible all -m script -a '/root/admin-rc'
+10.182.173.89 | SUCCESS => {
+    "changed": true, 
+    "rc": 0, 
+    "stderr": "Shared connection to 10.182.173.89 closed.\r\n", 
+    "stderr_lines": [
+        "Shared connection to 10.182.173.89 closed."
+    ], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+[root@controller ansible]# echo $OS_USERNAME
+
 ```
