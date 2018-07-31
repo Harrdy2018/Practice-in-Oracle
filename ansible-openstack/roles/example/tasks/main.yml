@@ -1,0 +1,14 @@
+---
+# tasks file for example
+- name: copy create_example.sh script to dest
+  template: 
+    src: "{{ item }}" 
+    dest: /root/ 
+    owner: root 
+    group: root 
+    mode: 0775
+  with_items:
+    - create_example.sh
+- name: Create a domain, projects, users, and roles
+  shell: sh /root/create_example.sh
+  ignore_errors: yes
