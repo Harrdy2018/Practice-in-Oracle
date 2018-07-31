@@ -27,4 +27,24 @@
 ```
 * 尝试用shell模块执行脚本文件
 ```
+[root@controller ~]# pwd
+/root
+[root@controller ~]# cat admin-rc 
+export OS_USERNAME=admin
+export OS_PASSWORD=ADMIN_PASS
+export OS_PROJECT_NAME=admin
+export OS_USER_DOMAIN_NAME=Default
+export OS_PROJECT_DOMAIN_NAME=Default
+export OS_AUTH_URL=http://controller:35357/v3
+export OS_IDENTITY_API_VERSION=3
+
+[root@controller ansible]# echo $OS_USERNAME
+
+[root@controller ansible]# ansible all -m shell -a 'sh /root/admin-rc'
+10.182.173.89 | SUCCESS | rc=0 >>
+
+
+[root@controller ansible]# echo $OS_USERNAME
+
+
 ```
