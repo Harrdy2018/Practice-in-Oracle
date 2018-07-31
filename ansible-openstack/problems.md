@@ -88,3 +88,6 @@ export OS_IDENTITY_API_VERSION=3
 [root@controller ansible]# echo $OS_USERNAME
 
 ```
+* 不使用ansible直接导入
+```
+```
