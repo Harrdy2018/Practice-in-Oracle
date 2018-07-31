@@ -25,7 +25,7 @@
 [root@controller ansible]# 
 
 ```
-* 尝试用shell模块执行脚本文件
+* 尝试用shell模块执行脚本文件,执行成功，环境变量导不进去
 ```
 [root@controller ~]# pwd
 /root
