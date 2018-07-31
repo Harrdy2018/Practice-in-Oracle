@@ -115,6 +115,8 @@ admin
 [root@controller ~]# unset OS_USERNAME
 [root@controller ~]# 
 ```
+
+## 创建实例的时候出现问题
 ```
 [root@controller ~]# ansible all -m command -a 'openstack project create --domain default --description "Demo Project" demo'
 10.182.173.89 | FAILED | rc=1 >>
