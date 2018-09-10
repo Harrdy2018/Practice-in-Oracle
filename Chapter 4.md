@@ -94,4 +94,15 @@ core.10858  Desktop    Downloads  Music      mySoftware     Public    testA
 
 zip也可以直接压缩目录，我现在还不知道 -r 参数有什么用！
 -r   recurse into directories
+
+解压缩
+[harrdy@HJX ~]$ ls
+aaa  core.10858  core.2788  Desktop  Documents  Downloads  fname.zip  Music  myDevelopment  mySoftware  Pictures  Public  Templates  Videos
+[harrdy@HJX ~]$ unzip ./fname.zip 
+Archive:  ./fname.zip
+   creating: testA/
+[harrdy@HJX ~]$ ls
+aaa         core.2788  Documents  fname.zip  myDevelopment  Pictures  Templates  Videos
+core.10858  Desktop    Downloads  Music      mySoftware     Public    testA
+[harrdy@HJX ~]$ 
 ```
