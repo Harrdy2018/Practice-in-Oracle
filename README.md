@@ -23,7 +23,7 @@
 ***
 * [Linux基础 Chapter 4 Linux常用命令](./Chapter%204.md)
 * [Linux基础 Chapter 7 用户和用户组管理](./Chapter%207.md)
-* 部署openstack相关脚本()
+* Ansible 部署 openstack 相关脚本(./ansible-openstack)
 ***
 ## Linux 杂记
 * Fedora Linux
