@@ -79,3 +79,19 @@ core.10858  Desktop    Downloads     Music          mySoftware  Public     testA
 core.2788   Documents  fname.tar.gz  myDevelopment  Pictures    Templates  Videos
 [harrdy@HJX ~]$ 
 ```
+* 压缩解压命令 zip
+```
+[harrdy@HJX ~]$ which zip
+/usr/bin/zip
+
+压缩文件 
+[harrdy@HJX ~]$ zip fname ./aaa
+  adding: aaa (stored 0%)
+[harrdy@HJX ~]$ ls
+aaa         core.2788  Documents  fname.zip  myDevelopment  Pictures  Templates  Videos
+core.10858  Desktop    Downloads  Music      mySoftware     Public    testA
+[harrdy@HJX ~]$ 
+
+zip也可以直接压缩目录，我现在还不知道 -r 参数有什么用！
+-r   recurse into directories
+```
