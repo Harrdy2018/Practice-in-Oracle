@@ -22,7 +22,7 @@
 * [CentOS 7 系统配置国内 yum 源和 epel 源](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E9%85%8D%E7%BD%AEyum%E6%BA%90%E5%92%8Cepel%E6%BA%90.md)
 ***
 * [Linux基础 Chapter 7 用户和用户组管理](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Chapter%207.md)
-* [Linux基础 Chapter 4 Linux常用命令](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Chapter%207.md)
+* [Linux基础 Chapter 4 Linux常用命令](./Chapter%204.md)
 * 部署openstack相关脚本()
 ***
 ## Linux 杂记
