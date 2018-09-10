@@ -35,3 +35,33 @@ aaa.gz
 [harrdy@HJX ~]$ ls
 aaa  
 ```
+* 压缩命令： tar
+```
+命令名称：tar
+命令所在路径
+[harrdy@HJX ~]$ which tar
+/usr/bin/tar
+
+语法：tar -cvf
+-c 打包
+-v 显示详细信息
+-f 指定文件名
+-z 打包同时压缩
+
+只是纯粹的打包
+[harrdy@HJX ~]$ mkdir testA
+[harrdy@HJX ~]$ tar -cvf fname ./testA/
+./testA/
+[harrdy@HJX ~]$ ls
+core.10858  core.2788  Desktop  Documents  Downloads  fname  Music  myDevelopment  mySoftware  Pictures  Public  Templates  testA  Videos
+[harrdy@HJX ~]$ 
+
+打包的同时压缩
+[harrdy@HJX ~]$ mkdir testA
+[harrdy@HJX ~]$ tar -zcvf fname.tar.gz ./testA/
+./testA/
+[harrdy@HJX ~]$ ls
+core.10858  Desktop    Downloads     Music          mySoftware  Public     testA
+core.2788   Documents  fname.tar.gz  myDevelopment  Pictures    Templates  Videos
+[harrdy@HJX ~]$ 
+```
