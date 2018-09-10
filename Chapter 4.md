@@ -106,3 +106,31 @@ aaa         core.2788  Documents  fname.zip  myDevelopment  Pictures  Templates 
 core.10858  Desktop    Downloads  Music      mySoftware     Public    testA
 [harrdy@HJX ~]$ 
 ```
+* 解压缩命令 bzip2   -k --keep           keep (don't delete) input files
+```
+压缩比惊人
+[harrdy@HJX ~]$ which bzip2
+/usr/bin/bzip2
+
+压缩文件并保留源文件
+[harrdy@HJX ~]$ ls
+aaa  core.10858  core.2788  Desktop  Documents  Downloads  Music  myDevelopment  mySoftware  Pictures  Public  Templates  testA  Videos
+[harrdy@HJX ~]$ bzip2 -k aaa 
+[harrdy@HJX ~]$ ls
+aaa      core.10858  Desktop    Downloads  myDevelopment  Pictures  Templates  Videos
+aaa.bz2  core.2788   Documents  Music      mySoftware     Public    testA
+[harrdy@HJX ~]$ 
+
+[harrdy@HJX ~]$ ls
+aaa  core.10858  core.2788  Desktop  Documents  Downloads  Music  myDevelopment  mySoftware  Pictures  Public  Templates  testA  Videos
+[harrdy@HJX ~]$ tar -jcvf fname.tar.bz2 ./aaa   可以使用参数 -j 代替
+./aaa
+[harrdy@HJX ~]$ ls
+aaa         core.2788  Documents  fname.tar.bz2  myDevelopment  Pictures  Templates  Videos
+core.10858  Desktop    Downloads  Music          mySoftware     Public    testA
+[harrdy@HJX ~]$ 
+
+解压缩
+bunzip2 -k aaa.bz2
+tar -jxvf fname.tar.bz2
+```
