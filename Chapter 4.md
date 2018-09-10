@@ -35,17 +35,17 @@ aaa.gz
 [harrdy@HJX ~]$ ls
 aaa  
 ```
-* 压缩命令： tar
+* 压缩解压命令： tar
 ```
 命令名称：tar
 命令所在路径
 [harrdy@HJX ~]$ which tar
 /usr/bin/tar
 
-语法：tar -cvf
+语法：tar -zcvf
 -c 打包
 -v 显示详细信息
--f 指定文件名
+-f 指定压缩之后的文件名
 -z 打包同时压缩
 
 只是纯粹的打包
@@ -59,6 +59,20 @@ core.10858  core.2788  Desktop  Documents  Downloads  fname  Music  myDevelopmen
 打包的同时压缩
 [harrdy@HJX ~]$ mkdir testA
 [harrdy@HJX ~]$ tar -zcvf fname.tar.gz ./testA/
+./testA/
+[harrdy@HJX ~]$ ls
+core.10858  Desktop    Downloads     Music          mySoftware  Public     testA
+core.2788   Documents  fname.tar.gz  myDevelopment  Pictures    Templates  Videos
+[harrdy@HJX ~]$ 
+
+解压缩 
+语法：tar -xcvf
+-x 解包
+-v 显示详细信息
+-f 指定解压文件
+-z 打包同时压缩
+
+[harrdy@HJX ~]$ tar -zxvf fname.tar.gz 
 ./testA/
 [harrdy@HJX ~]$ ls
 core.10858  Desktop    Downloads     Music          mySoftware  Public     testA
