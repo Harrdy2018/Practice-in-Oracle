@@ -2,7 +2,7 @@
 
 ***
 ## 第六节 压缩解压命令
-* 压缩解压命令： gzip
+* 压缩命令： gzip
 ```
 命令名称：gzip
 命令英文原意: GNU zip
@@ -19,4 +19,19 @@
 [harrdy@HJX ~]$ gzip aaa
 [harrdy@HJX ~]$ ls
 aaa.gz 
+```
+* 解压命令： gunzip
+```
+命令名称：gunzip
+命令英文原意: GNU unzip
+
+命令所在路径
+[harrdy@HJX ~]$ which gunzip
+/usr/bin/gunzip
+
+语法：gunzip 压缩文件
+
+[harrdy@HJX ~]$ gunzip aaa.gz 
+[harrdy@HJX ~]$ ls
+aaa  
 ```
