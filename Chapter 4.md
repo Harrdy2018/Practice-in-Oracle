@@ -2,7 +2,7 @@
 
 ***
 ## 第6节 压缩解压命令
-* 压缩命令： gzip
+* 压缩命令： gzip    只能压缩文件，不能压缩目录，不保留源文件
 ```
 命令名称：gzip
 命令英文原意: GNU zip
@@ -20,7 +20,7 @@
 [harrdy@HJX ~]$ ls
 aaa.gz 
 ```
-* 解压命令： gunzip
+* 解压命令： gunzip   不保留源文件
 ```
 命令名称：gunzip
 命令英文原意: GNU unzip
