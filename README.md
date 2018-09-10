@@ -9,20 +9,20 @@
 * [Ansible运维工具](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Ansible%20Tool.md)
 ***
 * [CentOS 7 初体验之 Yum](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/yum%20tool.md)
-* [CentOS 7 初体验之 软件包的一些事](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B.md)
+* [CentOS 7 初体验之 软件包的一些事](./%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B.md)
 * [CentOS 7 初体验之 tomcat](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/tomcat.md)
 * [CentOS 7 初体验之 Vim](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Vim%20Tool.md)
 * [CentOS 7 初体验之 gcc](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/gcc.md)
 * [CentOS 7 初体验之 EPEL源](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/EPEL%E6%BA%90.md)
 * [CentOS 7 初体验之 配置MariaDB](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E9%85%8D%E7%BD%AE%20MariaDB.md)
-* [CentOS 7 初体验之 搭建 ntp server](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E6%90%AD%E5%BB%BA%20ntp%20server.md)
+* [CentOS 7 初体验之 搭建 ntp server](./%E6%90%AD%E5%BB%BA%20ntp%20server.md)
 * [CentOS 7 初体验之 Shell 变量](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Shell%20%E5%8F%98%E9%87%8F.md)
 * [CentOS 7 初体验之 Shell 编程](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Shell%E7%BC%96%E7%A8%8B.md)
 ***
-* [CentOS 7 系统配置国内 yum 源和 epel 源](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/%E9%85%8D%E7%BD%AEyum%E6%BA%90%E5%92%8Cepel%E6%BA%90.md)
+* [CentOS 7 系统配置国内 yum 源和 epel 源](./%E9%85%8D%E7%BD%AEyum%E6%BA%90%E5%92%8Cepel%E6%BA%90.md)
 ***
-* [Linux基础 Chapter 7 用户和用户组管理](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Chapter%207.md)
 * [Linux基础 Chapter 4 Linux常用命令](./Chapter%204.md)
+* [Linux基础 Chapter 7 用户和用户组管理](./Chapter%207.md)
 * 部署openstack相关脚本()
 ***
 ## Linux 杂记
