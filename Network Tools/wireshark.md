@@ -50,3 +50,13 @@ Transaction Summary
 ============================================================================================================================================
 Install  2 Packages (+1 Dependent package)
 ```
+
+***
+## 使用
+```linux
+[harrdy@HJX ~]$ which wireshark
+/usr/sbin/wireshark
+[harrdy@HJX ~]$ wireshark -v
+[harrdy@HJX ~]$ wireshark -h
+[harrdy@HJX ~]$ wireshark           不加任何参数表示打开图形化界面
+```
