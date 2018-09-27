@@ -33,3 +33,20 @@ wireshark.x86_64 : Network traffic analyzer
   Name and summary matches only, use "search all" for everything.
 [harrdy@HJX ~]$ 
 ```
+* 安装命令 sudo yum install wireshark wireshark-gnome
+```linux
+Dependencies Resolved
+
+============================================================================================================================================
+ Package                               Arch                         Version                                Repository                  Size
+============================================================================================================================================
+Installing:
+ wireshark                             x86_64                       1.10.14-14.el7                         base                        13 M
+ wireshark-gnome                       x86_64                       1.10.14-14.el7                         base                       910 k
+Installing for dependencies:
+ libsmi                                x86_64                       0.4.8-13.el7                           base                       2.3 M
+
+Transaction Summary
+============================================================================================================================================
+Install  2 Packages (+1 Dependent package)
+```
