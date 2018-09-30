@@ -21,7 +21,6 @@
 <script src="../three.js-master/build/three.js"></script>
 <script src="../three.js-master/examples/js/libs/stats.min.js"></script>
 <script src="../three.js-master/examples/js/controls/OrbitControls.js"></script>
-<script src="../ThreeCSG.js"></script>
 <script>
 	// 获取浏览器窗口的宽高，后续会用
 	var width=window.innerWidth;
