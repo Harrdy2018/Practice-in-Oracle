@@ -267,3 +267,6 @@
 ***
 ## 效果图如下
 ![my3D-demo](./my3D-demo.png)
+
+***
+* ***[source code](./my3D-source.js)***
