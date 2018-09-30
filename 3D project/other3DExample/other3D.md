@@ -1,4 +1,8 @@
 # 一个3D机房完整的例子
+***
+## 第三库说明
+* [jquery官方网站](http://jquery.com/)
+***
 ```html
 <!DOCTYPE html>
 <html>
