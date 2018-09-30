@@ -7,6 +7,12 @@
 * [ThreeCSG.js](./ThreeCSG.js)  [官方网站](https://github.com/chandlerprall/ThreeCSG)
 
 ***
+## 封装库
+* [msj3D.js](./msj3D.js)
+* [data.js](./data.js)
+
+***
+## html代码
 ```html
 <!DOCTYPE html>
 <html>
