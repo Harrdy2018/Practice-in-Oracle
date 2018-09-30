@@ -2,6 +2,7 @@
 
 ***
 ## 代码如下所示，目前只搭建了机房的围墙和门之类的基本组件
+* [本代码第三方库网站](https://github.com/mrdoob/three.js/)
 ```html
 <!DOCTYPE html>
 <html>
