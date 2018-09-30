@@ -4,7 +4,7 @@
 ## 第三库说明
 * [jquery官方网站](http://jquery.com/)
 * [three.js stats.min.js OrbitControls.js tween.min.js](https://github.com/mrdoob/three.js)
-* [ThreeCSG.js](./ThreeCSG.js)
+* [ThreeCSG.js](./ThreeCSG.js)  [官方网站](https://github.com/chandlerprall/ThreeCSG)
 
 ***
 ```html
