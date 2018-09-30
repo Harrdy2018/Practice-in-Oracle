@@ -28,7 +28,7 @@
 * 我的工作2018/06/15~2018/09/30
   * [学习Ansible运维工具](./Ansible%20Tool.md)
   * [Ansible 部署 openstack 相关脚本](./ansible-openstack)
-  * [学习mapv.js]()
+  * [学习mapv.js](./use%20mapvjs.md)
   
 ***
 ## Linux 杂记
