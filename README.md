@@ -32,4 +32,4 @@
   * [Ansible 部署 openstack 相关脚本](./ansible-openstack)
   * [学习mapv.js](./use%20mapvjs.md)
   * [three.js初步绘制3D机房](./3D%20project/my3DLab.md)
-  * [大佬3D机房代码整理]()
+  * [网上3D机房代码资料整理](./3D%20project/other3DExample/other3D.md)
