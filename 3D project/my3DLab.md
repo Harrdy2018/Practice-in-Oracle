@@ -19,9 +19,9 @@
 <body>
 <div id='divForRenderer'></div>
 </body>
-<script src="../three.js-master/build/three.js"></script>
-<script src="../three.js-master/examples/js/libs/stats.min.js"></script>
-<script src="../three.js-master/examples/js/controls/OrbitControls.js"></script>
+<script src="./build/three.js"></script>
+<script src="./examples/js/libs/stats.min.js"></script>
+<script src="./examples/js/controls/OrbitControls.js"></script>
 <script>
 	// 获取浏览器窗口的宽高，后续会用
 	var width=window.innerWidth;
@@ -263,3 +263,7 @@
 </script>>
 </html>
 ```
+
+***
+## 效果图如下
+![my3D-demo]()
