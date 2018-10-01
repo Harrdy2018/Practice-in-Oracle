@@ -120,4 +120,15 @@ Linux默认的情况下会提供6个Terminal来让用户登陆，切换的方式
 X Window下进入命令行模式和命令行模式进入X Window模式
 在纯文本环境下执行如下命令即可： 
 startx 
+
+切换Run level(执行等级)实现模式的切换
+Linux提供了7种执行等级，下面介绍四种，以后做补充： 
+run level 0：关机 
+run level 3：命令行模式 
+run level 5：图形界面模式 
+run level 6：关机
+
+在各种模式间切换需要init这个命令，例如： 
+init 0  : 关机 
+init 3  : 进入命令行模式 
 ```
