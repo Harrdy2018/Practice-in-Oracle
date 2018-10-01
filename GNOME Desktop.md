@@ -255,5 +255,8 @@ Warning: Group graphical-admin-tools does not have any packages to install.
 Group graphical-admin-tools does have 1 conditional packages, which may get installed.
 
 很多网上资料是要安装"Graphical Administration Tools" ，并且安装成功之后通过 yum grouplist 是可以看到“Graphical Administration Tools”是已安装的。
-如果单独安装“Graphical Administration Tools”会出现上面的提示。可以不用再尝试了，可能此时你已经安装图形化可视界面成功。在我的这种实验环境下，就不需要安装"Graphical Administration Tools"，而且通过 yum grouplist 是可以看到“Graphical Administration Tools”是可安装状态而不是已安装的状态。但是不影响我成功安装可视化图形界面。可能这个跟系统的版本有关。大家记住只要在执行startx 命令能够进去可视化图形界面就表示安装成功有效的。
+如果单独安装“Graphical Administration Tools”会出现上面的提示。可以不用再尝试了，可能此时你已经安装图形化可视界面成功。
+在我的这种实验环境下，就不需要安装"Graphical Administration Tools"，
+而且通过 yum grouplist 是可以看到“Graphical Administration Tools”是可安装状态而不是已安装的状态。
+但是不影响我成功安装可视化图形界面。可能这个跟系统的版本有关。大家记住只要在执行startx 命令能够进去可视化图形界面就表示安装成功有效的。
 ```
