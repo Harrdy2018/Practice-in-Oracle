@@ -105,3 +105,19 @@ Conflicts=rescue.service rescue.target
 After=basic.target rescue.service rescue.target
 AllowIsolate=yes
 ```
+
+***
+## X Window与命令行模式
+```
+文本界面的登陆环境，也称为命令行界面（Command Line Interface,CLI）或终端界面（Terminal或Console）
+图形用户界面（Graphical User Interface,GUI）的登陆环境，X Window系统（也称为X或X11）是图形用户界面的一种
+Linux默认的情况下会提供6个Terminal来让用户登陆，切换的方式是[Ctrl] + [Alt] + [F1]~[F6]的组合按钮
+在centos7下
+[Ctrl] + [Alt] + [F2] ~ [F6] ：命令行模式登入 tty1 ~ tty6 终端机
+[Ctrl] + [Alt] + [F1] ：图形界面桌面
+(上面这几个组合按键都需要在命令行下输入)
+
+X Window下进入命令行模式和命令行模式进入X Window模式
+在纯文本环境下执行如下命令即可： 
+startx 
+```
