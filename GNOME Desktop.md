@@ -216,3 +216,44 @@ Available Groups:
    Xfce
 Done
 ```
+
+***
+## 其他问题
+* 卸载GNOME桌面环境 `yum group remove "GNOME Desktop"` 
+
+* 如果希望以后每次进入系统的时候都是默认是可视化界面 `systemctl set-default graphical.target`
+
+* 安装`Graphical Administration Tools`不成功
+```
+[harrdy@HJX ~]$ sudo yum group install "Graphical Administration Tools"
+Loaded plugins: fastestmirror, langpacks
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Repository epel is listed more than once in the configuration
+Repository epel-debuginfo is listed more than once in the configuration
+Repository epel-source is listed more than once in the configuration
+Loading mirror speeds from cached hostfile
+ * base: mirrors.njupt.edu.cn
+ * extras: mirrors.njupt.edu.cn
+ * nux-dextop: mirror.li.nux.ro
+ * updates: mirrors.njupt.edu.cn
+ * webtatic: uk.repo.webtatic.com
+Warning: Group graphical-admin-tools does not have any packages to install.
+Group graphical-admin-tools does have 1 conditional packages, which may get installed.
+Maybe run: yum groups mark install (see man yum)
+No packages in any requested group available to install or update
+```
+```
+出现： 
+Warning: Group graphical-admin-tools does not have any packages to install.
+Group graphical-admin-tools does have 1 conditional packages, which may get installed.
+
+很多网上资料是要安装"Graphical Administration Tools" ，并且安装成功之后通过 yum grouplist 是可以看到“Graphical Administration Tools”是已安装的。
+如果单独安装“Graphical Administration Tools”会出现上面的提示。可以不用再尝试了，可能此时你已经安装图形化可视界面成功。在我的这种实验环境下，就不需要安装"Graphical Administration Tools"，而且通过 yum grouplist 是可以看到“Graphical Administration Tools”是可安装状态而不是已安装的状态。但是不影响我成功安装可视化图形界面。可能这个跟系统的版本有关。大家记住只要在执行startx 命令能够进去可视化图形界面就表示安装成功有效的。
+```
