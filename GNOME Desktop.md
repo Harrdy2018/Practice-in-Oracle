@@ -1,6 +1,23 @@
 # GNOME Desktop
 
 ***
+## 查看Linux系统版本的命令
+* 查看内核版本命令，以下三个命令任选
+```
+[harrdy@HJX ~]$ cat /proc/version 
+Linux version 3.10.0-862.11.6.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-28) (GCC) ) #1 SMP Tue Aug 14 21:49:04 UTC 2018
+[harrdy@HJX ~]$ uname -a
+Linux HJX 3.10.0-862.11.6.el7.x86_64 #1 SMP Tue Aug 14 21:49:04 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+[harrdy@HJX ~]$ uname -r
+3.10.0-862.11.6.el7.x86_64
+```
+* 查看linux版本
+```
+[harrdy@HJX ~]$ cat /etc/redhat-release 
+CentOS Linux release 7.5.1804 (Core) 
+```
+
+***
 ## 理解`/etc/inittab`文件
 ```linux
 [harrdy@HJX ~]$ cat /etc/inittab
