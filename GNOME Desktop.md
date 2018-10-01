@@ -132,3 +132,87 @@ run level 6：关机
 init 0  : 关机 
 init 3  : 进入命令行模式 
 ```
+
+***
+## 安装Gnome 桌面
+* 需要使用 yum group install "GNOME Desktop"
+```
+[harrdy@HJX ~]$ yum groups
+Loaded plugins: fastestmirror, langpacks
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Repository epel is listed more than once in the configuration
+Repository epel-debuginfo is listed more than once in the configuration
+Repository epel-source is listed more than once in the configuration
+Loading mirror speeds from cached hostfile
+ * base: mirrors.nju.edu.cn
+ * extras: mirrors.shu.edu.cn
+ * nux-dextop: li.nux.ro
+ * updates: mirrors.nju.edu.cn
+ * webtatic: uk.repo.webtatic.com
+Installed Environment Groups: 1
+Available Environment Groups: 11
+Available Groups: 20
+Done
+[harrdy@HJX ~]$ yum group list
+Loaded plugins: fastestmirror, langpacks
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Repository base is listed more than once in the configuration
+Repository updates is listed more than once in the configuration
+Repository extras is listed more than once in the configuration
+Repository centosplus is listed more than once in the configuration
+Repository epel is listed more than once in the configuration
+Repository epel-debuginfo is listed more than once in the configuration
+Repository epel-source is listed more than once in the configuration
+Loading mirror speeds from cached hostfile
+ * base: mirrors.nju.edu.cn
+ * extras: mirrors.shu.edu.cn
+ * nux-dextop: li.nux.ro
+ * updates: mirrors.nju.edu.cn
+ * webtatic: uk.repo.webtatic.com
+Installed Environment Groups:
+   GNOME Desktop
+Available Environment Groups:
+   Minimal Install
+   Compute Node
+   Infrastructure Server
+   File and Print Server
+   Cinnamon Desktop
+   MATE Desktop
+   Basic Web Server
+   Virtualization Host
+   Server with GUI
+   KDE Plasma Workspaces
+   Development and Creative Workstation
+Available Groups:
+   Cinnamon
+   Compatibility Libraries
+   Console Internet Tools
+   Development Tools
+   Educational Software
+   Electronic Lab
+   Fedora Packager
+   General Purpose Desktop
+   Graphical Administration Tools
+   Haskell
+   Legacy UNIX Compatibility
+   MATE
+   Milkymist
+   Scientific Support
+   Security Tools
+   Smart Card Support
+   System Administration Tools
+   System Management
+   TurboGears application framework
+   Xfce
+Done
+```
