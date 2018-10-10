@@ -21,6 +21,7 @@
 * [CentOS 7 初体验之 Shell 编程](https://github.com/Harrdy2018/Practice-in-Oracle/blob/master/Shell%E7%BC%96%E7%A8%8B.md)
 * [CentOS 7 初体验之 GNOME Desktop](./GNOME%20Desktop.md)
 * [CentOS 7 初体验之 sougou输入法](./%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95.md)
+* [CentOS 7 初体验之 ](./%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95.md)
 ***
 * [CentOS 7 系统配置国内 yum 源和 epel 源](./%E9%85%8D%E7%BD%AEyum%E6%BA%90%E5%92%8Cepel%E6%BA%90.md)
 ***
