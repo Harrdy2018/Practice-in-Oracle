@@ -23,6 +23,7 @@
 * [CentOS 7 初体验之 sougou输入法](./%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95.md)
 * [CentOS 7 初体验之 Google Chrome](./Google%20Chrome.md)
 * [CentOS 7 初体验之 Anaconda](./Anaconda.md)
+* [CentOS 7 初体验之 python3.7](./python3.7.md)
 ***
 * [CentOS 7 系统配置国内 yum 源和 epel 源](./%E9%85%8D%E7%BD%AEyum%E6%BA%90%E5%92%8Cepel%E6%BA%90.md)
 ***
