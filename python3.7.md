@@ -74,3 +74,40 @@ Type "help", "copyright", "credits" or "license" for more information.
 [root@yuioplvlinux-130 ~]# pip --version
 pip 10.0.1 from /usr/local/sbin/python-3.7/lib/python3.7/site-packages/pip (python 3.7)
 ```
+
+***
+### 问题
+```linux
+最近在redhat 7上安装Python3.6.4之后，使用pip命令出现了问题，提示说找不到ssl模块，出现错误如下：
+
+pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+
+Could not fetch URL https:*******: There was a problem confirming the ssl certificate: 
+Can't connect to HTTPS URL because the SSL module is not available. - skipping
+
+
+本人查阅资料发现，在./configure过程中，如果没有加上–with-ssl参数时，默认安装的软件涉及到ssl的功能不可用，
+刚好pip3过程需要ssl模块，而由于没有指定，所以该功能不可用。
+
+查看openssl安装包，发现缺少openssl-devel包 
+[root@localhost ~]# rpm -aq|grep openssl 
+openssl-0.9.8e-20.el5 
+openssl-0.9.8e-20.el5 
+[root@localhost ~]#
+
+yum安装openssl-devel 
+[root@localhost ~]# yum install openssl-devel -y 
+查看安装结果 
+[root@localhost ~]# rpm -aq|grep openssl 
+openssl-0.9.8e-26.el5_9.1 
+openssl-0.9.8e-26.el5_9.1 
+openssl-devel-0.9.8e-26.el5_9.1 
+openssl-devel-0.9.8e-26.el5_9.1
+
+重新对python3.6进行编译安装，用一下过程来实现编译安装:
+
+cd Python-3.6.4
+./configure --with-ssl
+make
+sudo make install
+```
