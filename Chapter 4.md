@@ -66,7 +66,7 @@ core.2788   Documents  fname.tar.gz  myDevelopment  Pictures    Templates  Video
 [harrdy@HJX ~]$ 
 
 解压缩 
-语法：tar -xcvf
+语法：tar -xvfz
 -x 解包
 -v 显示详细信息
 -f 指定解压文件
