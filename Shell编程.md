@@ -34,7 +34,7 @@ B:D
 ```
 
 ***
-## 第2.2节 字符串截取命令-printf命令
+## 第2.2节 格式化的控制下格式化和打印字符串-printf命令
 ```
 printf '输出类型输出格式'  输出内容
 
@@ -53,14 +53,54 @@ printf '输出类型输出格式'  输出内容
 \v                           垂直输出退格键，Tab
 ```
 * 例子
-```
-[root@controller harrdy]# printf %s 1 2 3 4 5 6
-123456[root@controller harrdy]# printf %s %s %s 1 2 3 4 5 6
-%s%s123456[root@controller harrdy]# printf '%s %s %s' 1 2 3 4 5 6
-1 2 34 5 6[root@controller harrdy]# printf '%s %s %s\n' 1 2 3 4 5 6
+```sh
+# %ns代表的意思是，只输出一个字符串，但是原始的字符比如1,2,3每个要占n个空格
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf "%s" 1 2 3
+123
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf "%2s" 1 2 3
+ 1 2 3
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf "%3s" 1 2 3
+  1  2  3
+  
+# %m.nf代表的意思是，只输出一个字符串，但是原始的字符比如1,2,3每个要有n个小数位，并且每个字符占m个空格
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf "%.2f" 1 2 3
+1.002.003.00
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf "%5.2f" 1 2 3
+ 1.00 2.00 3.00
+
+# 有几个%s打印几个字符，字符与字符之间用空格隔开
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf "%s" 1 2 3
+123
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf "%s %s" 1 2 3
+1 23
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf "%s %s %s" 1 2 3
 1 2 3
-4 5 6
-[root@controller harrdy]# 
+
+# 每三个字符打印一个空格，每3个字符打印一个kk,如果不够3个，可以想象成补空字符
+$ printf "%s %s %s\n" 1 2 3 4 5
+1 2 3
+4 5
+
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf "%s %s %skk" 1 2 3 4 5
+1 2 3kk4 5 kk
+
+# -v var把输出分配给shell变量，而不是直接输出
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ printf -v myVal "%s" 1 2 3
+
+Harrdy@DESKTOP-T94UKG2 MINGW64 ~/Desktop
+$ echo $myVal
+123
+
 ```
 ***
 ## 第2.3节 字符串截取命令-awk命令
